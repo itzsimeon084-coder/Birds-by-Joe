@@ -1,0 +1,1495 @@
+ /*=========================================================
+   BIRDS BY JOE
+   GLOBAL STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   2. GLOBAL CONTAINER
+   ========================================================= */
+
+.site-header,
+main,
+.site-footer {
+    width: 100%;
+}
+
+.top-header,
+.search-container,
+.main-navigation,
+.hero-section,
+.business-introduction,
+.birds-sale-section,
+.shop-category-section,
+.about-preview,
+.newsletter-section,
+.contact-preview,
+.footer-content {
+    width: min(1200px, 92%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+3. HEADER
+   ========================================================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    position: relative;
+    z-index: 1000;
+}
+
+.top-header {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 18px 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    max-width: 240px;
+}
+
+.logo img {
+    max-width: 240px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+
+/* PHONE */
+
+.header-phone {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+.header-phone:hover {
+    color: #7a4a20;
+}
+
+
+/* =========================================================
+   4. SEARCH
+   ========================================================= */
+
+.search-container {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.search-form {
+    width: min(500px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    padding: 12px 15px;
+
+    font-size: 15px;
+}
+
+.search-form button {
+    width: 52px;
+
+    border: none;
+
+    background: #6b4423;
+    color: #ffffff;
+
+    transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+    background: #4d2f17;
+}
+
+
+/* SEARCH RESULTS */
+
+.search-results {
+    position: absolute;
+
+    top: calc(100% - 15px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(500px, 100%);
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    display: none;
+
+    z-index: 2000;
+}
+
+.search-results.active {
+    display: block;
+}
+
+.search-result-item {
+    display: block;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition: background 0.2s ease;
+}
+
+.search-result-item:hover {
+    background: #f5f5f5;
+}
+
+
+/* =========================================================
+
+   5. NAVIGATION
+   ========================================================= */
+
+.main-navigation {
+    position: relative;
+}
+
+.navigation-list {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.navigation-list > li {
+    position: relative;
+}
+
+.navigation-list > li > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 16px 13px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #333333;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+.navigation-list > li > a:hover {
+    color: #ffffff;
+    background: #6b4423;
+}
+
+
+/* =========================================================
+   6. DROPDOWN MENU
+   ========================================================= */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 220px;
+
+    list-style: none;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: 1500;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 11px 15px;
+
+    font-size: 14px;
+
+    color: #333333;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #6b4423;
+    color: #ffffff;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-button {
+    display: none;
+
+    border: none;
+
+    background: #6b4423;
+    color: #ffffff;
+
+    padding: 10px 15px;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+  7. HERO
+   ========================================================= */
+
+.hero-section {
+    min-height: 560px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    align-items: stretch;
+
+    margin-top: 35px;
+    margin-bottom: 70px;
+
+    background: #f6f1eb;
+}
+
+.hero-image {
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.hero-section:hover .hero-image img {
+    transform: scale(1.02);
+}
+
+.hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 55px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(36px, 5vw, 62px);
+
+    line-height: 1.1;
+
+    color: #4c3019;
+
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 17px;
+
+    margin-bottom: 18px;
+
+    color: #555555;
+}
+
+
+/* =========================================================
+   8. BUTTONS
+   ========================================================= */
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    padding: 13px 25px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    border: 1px solid transparent;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.primary-button {
+    background: #6b4423;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #4d2f17;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: transparent;
+
+    border-color: #6b4423;
+
+    color: #6b4423;
+}
+
+.secondary-button:hover {
+    background: #6b4423;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   9. BUSINESS INTRODUCTION
+   ========================================================= */
+
+.business-introduction {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 90px;
+
+    background: #fafafa;
+}
+
+.introduction-image {
+    min-height: 450px;
+}
+
+.introduction-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.introduction-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 55px;
+}
+
+.introduction-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 43px;
+
+    color: #4c3019;
+
+    margin-bottom: 8px;
+}
+
+.introduction-content h3 {
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+    color: #555555;
+}
+
+.introduction-content p {
+    margin-bottom: 8px;
+}
+
+.introduction-content .notice {
+    margin-top: 20px;
+
+    font-weight: 700;
+
+    color: #8a2727;
+}
+
+
+/* =========================================================
+10. SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    color: #4c3019;
+
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #666666;
+}
+
+
+/* =========================================================
+   11. BIRDS FOR SALE
+   ========================================================= */
+
+.birds-sale-section {
+    margin-bottom: 90px;
+}
+
+.bird-sale-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.bird-sale-card {
+    background: #ffffff;
+
+    border: 1px solid #e1e1e1;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.bird-sale-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bird-sale-card img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+.bird-sale-card h3 {
+    padding: 18px 10px 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    color: #4c3019;
+}
+
+.bird-sale-card a {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #6b4423;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+.bird-sale-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   12. SHOP BY CATEGORY
+   ========================================================= */
+
+.shop-category-section {
+    margin-bottom: 90px;
+}
+
+.shop-category-section .section-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: left;
+}
+
+.shop-category-section .section-heading h2 {
+    margin-bottom: 0;
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.category-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 280px;
+
+    background: #eeeeee;
+}
+
+.category-card img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.05)
+        );
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+.category-card h3,
+.category-card a {
+    position: absolute;
+
+    left: 20px;
+
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+.category-card h3 {
+    bottom: 58px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+}
+
+.category-card a {
+    bottom: 20px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    border-bottom: 1px solid #ffffff;
+}
+
+
+/* =========================================================
+   13. ABOUT PREVIEW
+   ========================================================= */
+.about-preview {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 90px;
+
+    background: #f6f1eb;
+}
+
+.about-image {
+    min-height: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.about-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+
+    color: #4c3019;
+
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+
+    color: #555555;
+}
+
+
+/* =========================================================
+   14. NEWSLETTER
+   ========================================================= */
+
+.newsletter-section {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    margin-bottom: 90px;
+
+    background: #4c3019;
+
+    color: #ffffff;
+}
+
+.newsletter-image {
+    min-height: 380px;
+}
+
+.newsletter-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.newsletter-content {
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.newsletter-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+
+    margin-bottom: 5px;
+}
+
+.newsletter-content p {
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.newsletter-form input,
+.newsletter-form select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    background: #ffffff;
+
+    color: #333333;
+
+    outline: none;
+}
+
+.newsletter-form input:focus,
+.newsletter-form select:focus {
+    border-color: #ffffff;
+}
+
+.newsletter-form button {
+    grid-column: 1 / -1;
+
+    padding: 14px;
+
+    border: 1px solid #ffffff;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #ffffff;
+
+    color: #4c3019;
+}
+
+
+/* =========================================================
+   15. CONTACT
+   ========================================================= */
+
+.contact-preview {
+    margin-bottom: 90px;
+}
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+}
+
+.contact-information img {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    margin-bottom: 20px;
+}
+
+.contact-information p {
+    margin-bottom: 7px;
+}
+
+.contact-information a {
+    color: #6b4423;
+
+    font-weight: 600;
+}
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #cccccc;
+
+    outline: none;
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6b4423;
+}
+
+.contact-form button {
+    align-self: flex-start;
+
+    padding: 13px 30px;
+
+    border: none;
+
+    background: #6b4423;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #4d2f17;
+}
+
+.form-success {
+    padding: 10px;
+
+    background: #e9f7ec;
+
+    color: #236b31;
+}
+
+
+/* =========================================================
+   16. FOOTER
+   ========================================================= */
+   .site-footer {
+    background: #2e2118;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 40px;
+
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    margin-bottom: 18px;
+}
+
+.footer-column p,
+.footer-column a {
+    margin-bottom: 8px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 170px;
+
+    max-height: 80px;
+
+    object-fit: contain;
+
+    margin-bottom: 18px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 13px;
+
+    color: #cccccc;
+}
+
+
+/* =========================================================
+   17. TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navigation-list > li > a {
+        padding: 13px 8px;
+
+        font-size: 12px;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-content {
+        padding: 40px;
+    }
+
+    .bird-sale-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   18. MOBILE
+   ========================================================= */
+   @media (max-width: 700px) {
+
+    /* GLOBAL */
+
+    .top-header,
+    .search-container,
+    .main-navigation,
+    .hero-section,
+    .business-introduction,
+    .birds-sale-section,
+    .shop-category-section,
+    .about-preview,
+    .newsletter-section,
+    .contact-preview,
+    .footer-content {
+        width: 92%;
+    }
+
+
+    /* HEADER */
+
+    .top-header {
+        min-height: auto;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        padding: 18px 0;
+    }
+
+    .logo {
+        max-width: 190px;
+    }
+
+    .logo img {
+        max-width: 190px;
+        max-height: 65px;
+    }
+
+    .header-phone {
+        font-size: 15px;
+    }
+
+
+    /* SEARCH */
+
+    .search-container {
+        padding-bottom: 12px;
+    }
+
+
+    /* MOBILE NAV */
+
+    .mobile-menu-button {
+        display: block;
+
+        width: 100%;
+    }
+
+    .navigation-list {
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        border-top: none;
+    }
+
+    .navigation-list.active {
+        display: flex;
+    }
+
+    .navigation-list > li > a {
+        justify-content: space-between;
+
+        padding: 14px 10px;
+
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        min-width: 0;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        display: none;
+
+        box-shadow: none;
+
+        border-left: none;
+
+        border-right: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding-left: 25px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        display: flex;
+
+        flex-direction: column;
+
+        margin-top: 25px;
+
+        margin-bottom: 55px;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .hero-content {
+        padding: 35px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+
+    /* BUSINESS INTRO */
+
+    .business-introduction {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 60px;
+    }
+
+    .introduction-image {
+        min-height: 300px;
+    }
+
+    .introduction-content {
+        padding: 35px 25px;
+    }
+
+    .introduction-content h2 {
+        font-size: 36px;
+    }
+
+
+    /* BIRDS */
+
+    .birds-sale-section {
+        margin-bottom: 60px;
+    }
+
+    .bird-sale-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* SHOP */
+
+    .shop-category-section {
+        margin-bottom: 60px;
+    }
+
+    .shop-category-section .section-heading {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .category-card {
+        min-height: 300px;
+    }
+
+
+    /* ABOUT */
+.about-preview {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 60px;
+    }
+
+    .about-image {
+        min-height: 300px;
+    }
+
+    .about-content {
+        padding: 35px 25px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter-section {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 60px;
+    }
+
+    .newsletter-image {
+        min-height: 280px;
+    }
+
+    .newsletter-content {
+        padding: 35px 25px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 32px;
+    }
+
+    .newsletter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form button {
+        grid-column: auto;
+    }
+
+
+    /* CONTACT */
+
+    .contact-preview {
+        margin-bottom: 60px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .footer-column {
+        align-items: center;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   19. SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .introduction-content h2,
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content,
+    .introduction-content,
+    .about-content,
+    .newsletter-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   20. ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+   @media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
+/* SEARCH RESULTS */
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    background: #fff;
+    border: 1px solid #ddd;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    z-index: 9999;
+
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.search-results.show {
+    display: block;
+}
+
+.search-result-item {
+    display: flex;
+    flex-direction: column;
+
+    padding: 14px 16px;
+
+    color: #4c3019;
+    text-decoration: none;
+
+    border-bottom: 1px solid #eee;
+}
+
+.search-result-item:hover {
+    background: #f5f1ec;
+}
+
+.search-result-item strong {
+    font-size: 16px;
+}
+
+.search-result-item span {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #777;
+}
+
+.search-no-results {
+    padding: 15px;
+    text-align: center;
+    color: #777;
+}
+.search-highlight {
+    outline: 4px solid #d4a017;
+    outline-offset: 6px;
+    transition: outline 0.3s ease;
+}

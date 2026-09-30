@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Macaws | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="Learn about Macaws including Blue and Gold, Catalina, Greenwing, Hahn's, Harlequin, Hyacinth, Military, Red-Fronted, Scarlet, Severe and Yellow-Collared Macaws."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           MACAWS PAGE
+        ========================================= */
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .species-hero {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .species-hero img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .species-hero::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .species-hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            padding: 30px;
+        }
+
+        .species-hero-content h1 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(42px, 6vw, 64px);
+
+            margin-bottom: 12px;
+        }
+
+        .species-hero-content p {
+            font-size: 18px;
+
+            margin: 0;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+   .species-intro {
+            max-width: 850px;
+
+            margin: 0 auto 70px;
+
+            text-align: center;
+        }
+
+        .species-intro h2 {
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 40px;
+
+            margin-bottom: 18px;
+        }
+
+        .species-intro p {
+            color: #555555;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           SPECIES SECTION
+        ========================================= */
+
+        .bird-section {
+            display: grid;
+
+            grid-template-columns:
+                42% 58%;
+
+            margin-bottom: 75px;
+
+            border-bottom:
+                1px solid #dddddd;
+
+            padding-bottom: 65px;
+
+            gap: 40px;
+
+            align-items: start;
+        }
+
+        .bird-section:nth-child(even) {
+            grid-template-columns:
+                58% 42%;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-content {
+            order: 1;
+        }
+
+
+        /* =========================================
+           BIRD IMAGE
+        ========================================= */
+
+        .bird-image {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .bird-image:hover img {
+            transform:
+                scale(1.03);
+        }
+
+
+        /* =========================================
+           BIRD CONTENT
+        ========================================= */
+
+        .bird-content h2 {
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 31px;
+
+            margin:
+                0 0 18px;
+        }
+
+        .bird-content p {
+            color: #555555;
+
+            line-height: 1.85;
+
+            margin-bottom: 15px;
+        }
+
+        .bird-call {
+            margin-top: 20px;
+
+            color: #4c3019;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           CONTACT STRIP
+        ========================================= */
+macaw-contact {
+            margin:
+                20px 0 80px;
+
+            padding:
+                40px 25px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .macaw-contact h2 {
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+        .macaw-contact p {
+            color: #555555;
+
+            margin-bottom: 20px;
+        }
+
+        .macaw-contact a {
+            display: inline-block;
+
+            padding:
+                13px 25px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-weight: bold;
+        }
+
+        .macaw-contact a:hover {
+            background: #4c3019;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-child(even) {
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+            .bird-section:nth-child(even)
+            .bird-image,
+            .bird-section:nth-child(even)
+            .bird-content {
+                order: initial;
+            }
+
+            .bird-image {
+                width: 100%;
+            }
+
+            .bird-content h2 {
+                font-size: 27px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .species-hero {
+                min-height: 290px;
+
+                margin-top: 25px;
+            }
+
+            .species-hero-content h1 {
+                font-size: 40px;
+            }
+
+            .species-intro h2 {
+                font-size: 31px;
+            }
+
+            .bird-section {
+                margin-bottom: 55px;
+
+                padding-bottom: 45px;
+            }
+
+            .bird-content p {
+                font-size: 15px;
+            }
+
+        }
+
+     </style>
+     
+       <!-- Smartsupp Live Chat script -->
+     <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+     </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+<div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search website"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a
+                            href="macaws.html"
+                            class="active"
+                        >
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caique.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+            
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="species-page">
+
+
+    <!-- HERO -->
+
+    <section class="species-hero">
+
+        <!-- IMAGE:
+             MACAWS HERO -->
+
+        <img
+            src="images\macaws\484913281_1176189861182502_5330400978810387024_n.jpg"
+            alt="Macaws"
+        >
+
+        <div class="species-hero-content">
+
+            <h1>
+                Macaw For Sale
+            </h1>
+
+            <p>
+                Discover our beautiful Macaw species.
+            </p>
+
+        </div>
+
+    </section>
+<!-- INTRO -->
+
+    <section class="species-intro">
+
+        <h2>
+            Macaws
+        </h2>
+
+        <p>
+            Macaws are intelligent, colorful and highly
+            social parrots. Below are the Macaw varieties
+            featured on the original Birds by Joe page.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BLUE & GOLD
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Blue & Gold Macaw -->
+
+            <img
+                src="images\macaws\blue gm.jpg"
+                alt="Blue and Gold Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Blue &amp; Gold Macaws
+            </h2>
+
+            <p>
+                You may also know the Blue Gold Macaw as the
+                Blue and Yellow Macaw or the Blue Macaw. Their
+                striking combination of blue and yellow makes
+                them one of the most recognizable Macaws.
+            </p>
+
+            <p>
+                Hand-fed babies are especially appealing to
+                bird owners because of their intelligence,
+                playful personalities and social nature.
+                Blue and Gold Macaws require proper nutrition,
+                plenty of space and regular interaction.
+            </p>
+
+            <p>
+                Because of their large size, a spacious cage
+                and plenty of toys are important for their
+                wellbeing.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CATALINA
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Catalina Macaw -->
+
+            <img
+                src="images\macaws\catal m.jpg"
+                alt="Catalina Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Catalina Macaws
+            </h2>
+
+            <p>
+                The Catalina Macaw is a hybrid between the
+                Blue and Gold Macaw and the Scarlet Macaw.
+                Their appearance can vary depending on the
+                parent birds.
+            </p>
+
+            <p>
+                Catalina Macaws can inherit personality
+                characteristics from both parent breeds.
+                They are generally playful, social and eager
+                to learn.
+            </p>
+
+            <p>
+                Due to their size and active nature, they
+                require a large, secure cage with appropriate
+                toys and enrichment.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+         GREENWING
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Greenwing Macaw -->
+
+            <img
+                src="images\macaws\green wm.jpg"
+                alt="Greenwing Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Greenwing Macaws
+            </h2>
+
+            <p>
+                Greenwing Macaws are known for their beautiful
+                combination of red, green and blue feathers.
+                Their appearance is sometimes confused with
+                Scarlet Macaws.
+            </p>
+
+            <p>
+                Greenwing Macaws have green wing feathers and
+                distinctive red feather lines across their
+                facial area.
+            </p>
+
+            <p>
+                These intelligent and gentle birds still have
+                a playful and mischievous side and benefit
+                from large cages and plenty of chewable toys.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         HAHNS
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Hahn's Macaw -->
+
+            <img
+                src="images\macaws\hahn m.jpg"
+                alt="Hahn's Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Hahn's Macaws
+            </h2>
+
+            <p>
+                Hahn's Macaw is a small member of the
+                Red-Shouldered Macaw group and is often
+                referred to as a mini Macaw.
+            </p>
+
+            <p>
+                They are considerably smaller than the large
+                Macaw species, making them attractive to bird
+                lovers looking for a smaller companion.
+            </p>
+
+            <p>
+                Hahn's Macaws are social and friendly and can
+                be suitable for experienced bird owners who
+                understand their care requirements.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         HARLEQUIN
+    ========================================== -->
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Harlequin Macaw -->
+
+            <img
+                src="images\macaws\harleq m.jpg"
+                alt="Harlequin Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Harlequin Macaws
+            </h2>
+
+            <p>
+                Harlequin Macaws are hybrids resulting from
+                breeding Blue and Gold Macaws with Greenwing
+                Macaws.
+            </p>
+
+            <p>
+                They can inherit characteristics from both
+                parent breeds and are known for their colorful
+                appearance.
+            </p>
+
+            <p>
+                Their playful, affectionate and social
+                personalities make them appealing companion
+                birds.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         HYACINTH
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Hyacinth Macaw -->
+
+            <img
+                src="images\macaws\hyac m.jpg"
+                alt="Hyacinth Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                The Hyacinth Macaw
+            </h2>
+
+            <p>
+                The Hyacinth Macaw is one of the most
+                impressive and sought-after Macaw species.
+                It is famous for its vivid bluish-violet
+                coloration and enormous size.
+            </p>
+
+            <p>
+                Despite their powerful beaks and impressive
+                physical strength, Hyacinth Macaws are often
+                described as gentle and affectionate birds.
+            </p>
+
+            <p>
+                They require substantial space, specialized
+                care and an owner prepared for the needs of
+                a very large parrot.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MILITARY
+    ========================================== -->
+<section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Military Macaw -->
+
+            <img
+                src="images\macaws\mil m.jpg"
+                alt="Military Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Military Macaws
+            </h2>
+
+            <p>
+                Military Macaws have predominantly green
+                plumage with distinctive facial and wing
+                markings.
+            </p>
+
+            <p>
+                Their strong beaks, intelligence and social
+                nature make them interesting companion birds.
+            </p>
+
+            <p>
+                Military Macaws benefit from interaction,
+                enrichment and appropriate toys to keep them
+                mentally and physically occupied.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RED FRONTED
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Red-Fronted Macaw -->
+
+            <img
+                src="images\macaws\red frm.jpg"
+                alt="Red-Fronted Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Red-Fronted Macaws
+            </h2>
+
+            <p>
+                Red-Fronted Macaws are medium-sized Macaws
+                with striking red, orange and blue coloring.
+            </p>
+
+            <p>
+                Their colorful appearance becomes increasingly
+                distinctive as they mature.
+            </p>
+
+            <p>
+                They are intelligent, active birds that can
+                provide plenty of entertainment when given
+                sufficient space and appropriate enrichment.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SCARLET
+    ========================================== -->
+<section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Scarlet Macaw -->
+
+            <img
+                src="images\macaws\scar m.jpg"
+                alt="Scarlet Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Scarlet Macaws
+            </h2>
+
+            <p>
+                Scarlet Macaws are famous for their brilliant
+                red coloration combined with yellow and blue
+                wing feathers.
+            </p>
+
+            <p>
+                Their appearance makes them one of the most
+                recognizable Macaws.
+            </p>
+
+            <p>
+                Scarlet Macaws can have strong personalities
+                and require knowledgeable handling, proper
+                socialization and consistent care.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SEVERE
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Severe Macaw -->
+
+            <img
+                src="images\macaws\severe m.jpg"
+                alt="Severe Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Severe Macaws
+            </h2>
+
+            <p>
+                The Severe Macaw belongs to the mini-Macaw
+                category and is one of the larger members of
+                that group.
+            </p>
+
+            <p>
+                Their plumage is primarily green with
+                additional blue and reddish coloring.
+            </p>
+
+            <p>
+                They are active, social and intelligent birds
+                that enjoy toys and interaction. Proper
+                stimulation is important to help prevent
+                boredom and destructive behavior.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         YELLOW COLLARED
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 Yellow-Collared Macaw -->
+
+            <img
+                src="images\macaws\yel cm.jpg"
+                alt="Yellow-Collared Macaw"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Yellow-Collared Macaws
+            </h2>
+
+            <p>
+                Yellow-Collared Macaws are smaller Macaws with
+                large personalities. They are predominantly
+                green and develop a distinctive yellow collar
+                around the neck.
+            </p>
+
+            <p>
+                They are active and social birds and can learn
+                words and phrases with appropriate interaction
+                and training.
+            </p>
+
+            <p>
+                Their smaller size makes them an interesting
+                option for bird lovers who want a Macaw without
+                the size of the largest species.
+            </p>
+
+        </div>
+
+    </section>
+<!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="macaw-contact">
+
+        <h2>
+            Looking For A Macaw?
+        </h2>
+
+        <p>
+            Call us today to find out which Macaw may be
+            right for you.
+        </p>
+
+        <a href="tel:7327642473">
+            CALL (732) 764-2473
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe Logo"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+

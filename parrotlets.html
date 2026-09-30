@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parrotlets For Sale | Birds by Joe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+          .species-title h1 {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+          .main-species {
+            margin-bottom: 65px;
+        }
+
+         .main-species-image {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .main-species-image img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .main-species-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .species-title {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-species-image {
+            width: 100%;
+
+            margin-bottom: 35px;
+
+            background: #f2eee9;
+        }
+
+        .main-species-image img {
+            display: block;
+
+            width: 100%;
+
+            max-height: 550px;
+
+            object-fit: cover;
+        }
+
+        .main-species-content h2,
+        .bird-content h2 {
+            margin: 0 0 20px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 32px;
+        }
+
+        .main-species-content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 24px;
+        }
+
+        .main-species-content p,
+        .bird-content p {
+            margin-bottom: 17px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        .species-title {
+            text-align: center;
+            margin: 55px auto 45px;
+        }
+
+        .species-title h1 {
+            margin: 0;
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(40px, 6vw, 58px);
+        }
+
+        .main-species {
+            margin-bottom: 60px;
+        }
+
+        .main-species-image {
+            width: 100%;
+            margin-bottom: 35px;
+            background: #f2eee9;
+        }
+
+        .main-species-image img {
+            display: block;
+            width: 100%;
+            max-height: 550px;
+            object-fit: cover;
+        }
+
+        .main-species-content h2 {
+            margin: 0 0 20px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 32px;
+        }
+
+        .main-species-content h3 {
+            margin-top: 35px;
+            margin-bottom: 12px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+        }
+
+        .main-species-content p {
+            margin-bottom: 18px;
+            color: #555;
+            line-height: 1.85;
+        }
+
+        .available-link {
+            text-align: center;
+            margin: 20px 0 75px;
+        }
+
+        .available-link a {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #6b4423;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .available-link a:hover {
+            background: #4c3019;
+        }
+
+        .species-contact {
+            margin: 20px 0 80px;
+            padding: 45px 25px;
+            background: #f6f1eb;
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+            line-height: 1.7;
+        }
+        @media (max-width: 750px) {
+
+            .species-title {
+                margin-top: 35px;
+            }
+
+            .species-title h1 {
+                font-size: 40px;
+            }
+
+            .main-species-image img {
+                max-height: 400px;
+            }
+
+            .main-species-content h2 {
+                font-size: 28px;
+            }
+
+            .main-species-content h3 {
+                font-size: 22px;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .species-page {
+                width: 94%;
+            }
+
+            .species-title h1 {
+                font-size: 34px;
+            }
+
+            .main-species-content p {
+                font-size: 15px;
+            }
+
+        }
+
+     </style>
+     
+       <!-- Smartsupp Live Chat script -->
+     <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+     </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+<nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caiques.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="parrotlets.html"
+                            class="active"
+                        >
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="species-page">
+
+
+    <section class="species-title">
+        <h1>
+            Parrotlets For Sale
+        </h1>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MAIN PARROTLET SECTION
+    ================================================== -->
+
+    <section class="main-species">
+
+
+        <div class="main-species-image">
+
+            <!-- IMAGE:
+                 PARROTLETS FOR SALE
+
+                 Replace this file with your client's image.
+            -->
+
+            <img
+                src="images\parrotlets\469166345_1088753042705210_3347776120833121410_n.jpg"
+                alt="Parrotlets For Sale"
+            >
+
+        </div>
+
+
+        <div class="main-species-content">
+
+            <h2>
+                Parrotlets
+            </h2>
+
+            <p>
+                Parrotlets are among the smallest members of
+                the parrot family and are popular as household
+                companion birds.
+            </p>
+
+            <p>
+                Despite their small size, they are cheerful,
+                active and territorial birds with strong
+                personalities.
+            </p>
+
+            <p>
+                There are several attractive colors and
+                varieties available for people interested in
+                keeping a Parrotlet.
+            </p>
+
+            <p>
+                The Pacific Parrotlet and Green-Rumped
+                Parrotlet are among the varieties commonly
+                preferred by bird enthusiasts.
+            </p>
+
+            <p>
+                They are also relatively quiet compared with
+                many larger parrot species.
+            </p>
+
+
+            <h3>
+                Native Region/Natural Habitat
+            </h3>
+
+            <p>
+                Parrotlets are naturally found throughout
+                Mexico and Central and South America.
+            </p>
+
+            <p>
+                Their natural environments include forests,
+                woodland areas and other tropical and
+                subtropical habitats.
+            </p>
+
+
+            <h3>
+                Physical Characteristics
+            </h3>
+
+            <p>
+                Parrotlets are extremely small parrots.
+            </p>
+
+            <p>
+                Their small bodies make them suitable for
+                people looking for a companion bird without
+                the size of a larger parrot.
+            </p>
+
+            <p>
+                Adult Parrotlets can weigh approximately
+                33 grams, depending on the species and
+                individual bird.
+            </p>
+
+            <p>
+                Their wingspan is approximately nine and a
+                half inches.
+            </p>
+            <p>
+                They are available in a variety of bright
+                colors, including blue, green and yellow.
+            </p>
+
+            <p>
+                Male and female birds can have different
+                feather markings depending on the species.
+            </p>
+
+            <p>
+                Some females may display green coloration
+                around the face and wings, while males of
+                certain varieties can have blue markings.
+            </p>
+
+
+            <h3>
+                Personality &amp; Behavior
+            </h3>
+
+            <p>
+                Do not let the small size of a Parrotlet fool
+                you. These birds can have very large
+                personalities.
+            </p>
+
+            <p>
+                They can be energetic, confident and highly
+                territorial.
+            </p>
+
+            <p>
+                A Parrotlet may attempt to challenge other
+                birds or household pets, so appropriate
+                supervision is important.
+            </p>
+
+            <p>
+                They can also become attached to their
+                owners and enjoy regular interaction.
+            </p>
+
+            <p>
+                Because they can become independent or
+                territorial, owners should spend time
+                socializing and interacting with them.
+            </p>
+
+            <p>
+                Hand-feeding and gentle interaction can help
+                develop trust between the bird and its owner.
+            </p>
+
+            <p>
+                Parrotlets need exercise and enrichment to
+                remain active and healthy.
+            </p>
+
+            <p>
+                Toys and supervised playtime can help prevent
+                boredom.
+            </p>
+
+            <p>
+                Their lifespan can reach several decades when
+                they receive appropriate care.
+            </p>
+
+
+            <h3>
+                Speech &amp; Sounds
+            </h3>
+
+            <p>
+                Parrotlets are relatively quiet compared with
+                many larger parrots.
+            </p>
+
+            <p>
+                They can learn to imitate a number of words,
+                although they are not generally considered
+                among the strongest talking parrots.
+            </p>
+
+            <p>
+                They can also produce pleasant songs,
+                chirps and other vocalizations.
+            </p>
+
+            <p>
+                Their sounds can be used for communication,
+                attracting a mate and establishing territory.
+            </p>
+
+            <p>
+                In addition to vocal sounds, Parrotlets may
+                communicate through actions such as wing
+                flapping, chewing and pecking.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         AVAILABLE BABIES
+    ================================================== -->
+<div class="available-link">
+
+        <a href="available-babies.html">
+            SEE AVAILABLE BABIES FOR SALE
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         CONTACT
+    ================================================== -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For A Parrotlet?
+        </h2>
+
+        <p>
+            Call
+            <strong>(732) 764-2473</strong>
+            to ask about current availability.
+        </p>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat: 11:00am-8:00pm
+            </p>
+
+            <p>
+                Sun: 12pm - 5pm
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+

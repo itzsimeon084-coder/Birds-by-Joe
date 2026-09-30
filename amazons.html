@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon Birds For Sale | Birds by Joe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        .species-title {
+            text-align: center;
+            margin: 55px auto 65px;
+        }
+
+        .species-title h1 {
+            margin: 0 0 15px;
+            color: #4c3019;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+            font-size:
+                clamp(38px, 6vw, 58px);
+        }
+
+        .species-title p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .bird-section {
+            display: grid;
+            grid-template-columns: 42% 58%;
+            gap: 40px;
+            align-items: start;
+
+            margin-bottom: 75px;
+            padding-bottom: 65px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bird-section:nth-child(even) {
+            grid-template-columns: 58% 42%;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-content {
+            order: 1;
+        }
+
+        .bird-image {
+            width: 100%;
+            overflow: hidden;
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+
+            width: 100%;
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition: transform .3s ease;
+        }
+
+        .bird-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .bird-content h2 {
+            margin: 0 0 22px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 30px;
+        }
+.bird-content p {
+            margin: 0 0 17px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+        .bird-content ul {
+            margin: 0 0 20px;
+            padding-left: 25px;
+
+            color: #555;
+
+            line-height: 1.9;
+        }
+
+        .species-contact {
+            margin: 20px 0 80px;
+
+            padding: 45px 25px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+            margin-bottom: 22px;
+        }
+
+        .species-contact a {
+            display: inline-block;
+
+            padding: 13px 27px;
+
+            background: #6b4423;
+
+            color: #fff;
+
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .species-contact a:hover {
+            background: #4c3019;
+        }
+
+        @media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-child(even) {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .bird-section:nth-child(even)
+            .bird-image,
+            .bird-section:nth-child(even)
+            .bird-content {
+                order: initial;
+            }
+
+            .bird-content h2 {
+                font-size: 27px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .species-title {
+                margin-top: 35px;
+                margin-bottom: 50px;
+            }
+
+            .species-title h1 {
+                font-size: 38px;
+            }
+
+            .bird-section {
+                margin-bottom: 55px;
+                padding-bottom: 45px;
+            }
+
+            .bird-content p {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+ 
+       <!-- Smartsupp Live Chat script -->
+   <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="amazons.html"
+                            class="active"
+                        >
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caique.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="species-page">
+<section class="species-title">
+
+        <h1>
+            Amazon Birds For Sale
+        </h1>
+
+        <p>
+            Learn more about the Amazon parrots available
+            through Birds by Joe.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BLUE-CHEEKED AMAZON
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 BLUE-CHEEKED AMAZON -->
+
+            <img
+                src="images\amazons\blue ck.jpg"
+                alt="Blue-Cheeked Amazon"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Blue-Cheeked Amazon
+            </h2>
+
+            <h3>
+                Distribution / Range
+            </h3>
+
+            <p>
+                You will find the rare Blue-Cheeked Amazon
+                species across South America, particularly
+                northeastern regions.
+            </p>
+
+            <p>
+                Prominent areas include southeastern
+                Venezuela, northeastern French Guiana,
+                Suriname and northern Guyana.
+            </p>
+
+            <p>
+                Blue-Cheeked Amazons live near humid forests
+                and subtropical cloud forests. They can also
+                occur in savanna woodlands.
+            </p>
+
+            <p>
+                Seasonal movements towards coastal regions
+                can occur when food availability changes.
+            </p>
+
+            <p>
+                The Blue-Cheeked Amazon is considered
+                vulnerable because of habitat loss, food
+                shortages and the pet trade.
+            </p>
+
+            <p>
+                Call us at
+                <strong>732-764-2473</strong>
+                to find out if we have an Amazon parrot
+                available for you.
+            </p>
+
+            <h3>
+                Description
+            </h3>
+
+            <p>
+                Blue-Cheeked Amazon parrots normally measure
+                approximately 13 to 14 inches in length and
+                weigh around 480 to 600 grams.
+            </p>
+
+            <p>
+                Their plumage is predominantly green, with
+                blue coloration around the cheeks and
+                yellow-orange coloration around the crown
+                and wing areas.
+            </p>
+
+            <p>
+                Their bills are generally pink and red shaded
+                with grey coloration.
+            </p>
+            <p>
+                Adults normally have red or orange irises
+                surrounded by grey eye rings.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BLUE-FRONTED AMAZON
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 BLUE-FRONTED AMAZON -->
+
+            <img
+                src="images\amazons\blue fr.jpg"
+                alt="Blue-Fronted Amazon Parrot"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Blue-Fronted Amazon Parrot
+            </h2>
+
+            <p>
+                Blue-Fronted Amazons average approximately
+                14 to 15 inches in length.
+            </p>
+
+            <p>
+                They generally weigh between approximately
+                275 and 510 grams, although individual birds
+                can vary.
+            </p>
+
+            <p>
+                Blue-Fronted Amazons display a wide variety
+                of facial and head coloration.
+            </p>
+
+            <p>
+                Some birds have turquoise-blue coloration
+                across the forehead, while others can have
+                blue coloration extending across the face,
+                chest and neck.
+            </p>
+
+            <p>
+                Yellow markings may also appear around the
+                head and face.
+            </p>
+
+            <p>
+                Individual birds can vary significantly in
+                their facial pattern and the amount of
+                yellow or red coloration around the shoulder.
+            </p>
+
+            <p>
+                Their beak is dark grey and their feet are
+                grey.
+            </p>
+
+            <p>
+                We may have a Blue-Fronted Amazon available.
+                Call
+                <strong>732-764-2473</strong>
+                to find out about our current selection.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         YELLOW-HEADED AMAZON
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+             <!-- IMAGE:
+                 YELLOW-HEADED AMAZON -->
+
+            <img
+                src="images\amazons\yh.jpg"
+                alt="Yellow-Headed Amazon"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Yellow-Headed Amazon
+            </h2>
+
+            <p>
+                The Yellow-Headed Amazon averages
+                approximately 15 to 17 inches in length.
+            </p>
+
+            <p>
+                When excited, the feathers around the neck
+                and crown can rise, making the head appear
+                considerably larger.
+            </p>
+
+            <p>
+                These Amazons have rounded wings and a square
+                tail, giving them a strong physical build.
+            </p>
+
+            <p>
+                Their body is predominantly green with a
+                yellow head and red coloration along parts
+                of the wings.
+            </p>
+
+            <p>
+                Flight feathers can display bluish-violet
+                and black shades, while hidden red patches
+                may occur on the tail and flight feathers.
+            </p>
+
+            <p>
+                Both sexes look similar.
+            </p>
+
+            <p>
+                Yellow-Headed Amazons are highly intelligent,
+                imaginative birds that can become very
+                attached to people.
+            </p>
+
+            <p>
+                They are particularly well known for their
+                talking and singing abilities.
+            </p>
+
+            <p>
+                Some individuals can become nippy, so they
+                require appropriate handling, training and
+                socialization.
+            </p>
+
+            <p>
+                They can also be noisy and require suitable
+                toys, branches and activities to redirect
+                their energy.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         YELLOW-NAPE AMAZON
+    ========================================== -->
+
+    <section class="bird-section">
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 YELLOW-NAPE AMAZON -->
+
+            <img
+                src="images\amazons\yl naped.jpg"
+                alt="Yellow-Nape Amazon"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Yellow-Nape Amazon
+            </h2>
+
+            <ul>
+
+                <li>
+                    Size: 12-15 inches
+                </li>
+
+                <li>
+                    Average weight: 480-680 grams
+                </li>
+
+                <li>
+                    Green forehead and crown with a yellow
+                    band across the lower nape and hind neck.
+                </li>
+
+                <li>
+                    Some birds develop more yellow coloration
+                    as they mature.
+                </li>
+
+                <li>
+                    Dark grey beak with a somewhat lighter
+                    upper-beak base.
+                </li>
+
+                <li>
+                    Grey feet.
+                </li>
+
+            </ul>
+
+            <p>
+                Yellow-Napes are loved for their intelligence,
+                clown-like personality and impressive talking
+                and singing abilities.
+            </p>
+
+            <p>
+                They are particularly known for their strong
+                sense of pitch and remarkably human-sounding
+                voice when talking.
+            </p>
+
+            <p>
+                A healthy Amazon parrot can live approximately
+                50 to 60 years or even longer with good
+                nutrition and care.
+            </p>
+
+            <p>
+                Striking mutations of the Yellow-Nape have
+                also occurred in aviaries.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MEALY PARROT
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 MEALY PARROT -->
+
+            <img
+                src="images\amazons\mealy.jpg"
+                alt="Mealy Parrot"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Mealy Parrot
+            </h2>
+
+            <p>
+                Mealy Parrots are popular for their social
+                abilities and can live comfortably in pairs
+                and large flocks.
+            </p>
+            <p>
+                They can also interact with other bird species,
+                including macaws.
+            </p>
+
+            <p>
+                The Mealy Parrot normally measures around
+                15 to 17 inches, equivalent to approximately
+                38 to 41 cm.
+            </p>
+
+            <p>
+                Their weight can range from approximately
+                540 to 700 grams.
+            </p>
+
+            <p>
+                They are generally calm and less noisy than
+                some other parrot species.
+            </p>
+
+            <p>
+                Their head can feature violet, blue and
+                purple coloration while the body is
+                predominantly green.
+            </p>
+
+            <p>
+                Yellow patches may appear on the head and
+                the tail feathers are often lime green.
+            </p>
+
+            <p>
+                The crown can have purplish or bluish
+                coloration.
+            </p>
+
+            <p>
+                The beak is normally yellowish and the
+                unfeathered areas around the eyes are white
+                with reddish-orange shades.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ORANGE-WINGED AMAZON
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 ORANGE-WINGED AMAZON -->
+
+            <img
+                src="images\amazons\orange w.jpg"
+                alt="Orange-Winged Amazon"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Orange-Winged Amazons
+            </h2>
+
+            <p>
+                Orange-Winged Amazons are among the smaller
+                Amazon parrots.
+            </p>
+
+            <p>
+                They average approximately 12 to 13 inches
+                in length, although some subspecies can be
+                as small as 10 inches.
+            </p>
+            <p>
+                They generally weigh around 340 grams.
+            </p>
+
+            <p>
+                They are sometimes confused with
+                Blue-Fronted Amazons.
+            </p>
+
+            <p>
+                One of their distinguishing features is the
+                orange coloration in their wings, which gives
+                them their name.
+            </p>
+
+            <p>
+                Their plumage is mainly green with a blue
+                forehead, yellow coloration around the crown,
+                cheeks and outer tail tips, and an orange
+                wing patch.
+            </p>
+
+            <p>
+                Their beak is horn-colored with a grey tip.
+                Their feet are pale grey or horn-brown.
+            </p>
+
+            <p>
+                Males and females look alike.
+            </p>
+
+            <p>
+                Orange-Winged Amazons are strong chewers.
+                They require appropriate training and
+                supervision because they can chew materials
+                that may be dangerous inside a home.
+            </p>
+
+            <p>
+                Proper discipline, training and appropriate
+                chewing toys are important from a young age.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For An Amazon?
+        </h2>
+
+        <p>
+            Call us at
+            <strong>732-764-2473</strong>
+            to find out about our current selection.
+        </p>
+
+        <a href="contact.html">
+            CONTACT US
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+<div class="footer-content">
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

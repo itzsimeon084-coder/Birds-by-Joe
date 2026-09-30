@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finches For Sale | Birds by Joe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+          .main-species {
+            margin-bottom: 65px;
+        }
+
+         .main-species-image {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .main-species-image img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .main-species-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .species-title {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+        }
+        .species-title h1 {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+
+        .main-species-image {
+            width: 100%;
+
+            margin-bottom: 35px;
+
+            background: #f2eee9;
+        }
+
+        .main-species-image img {
+            display: block;
+
+            width: 100%;
+
+            max-height: 550px;
+
+            object-fit: cover;
+        }
+
+        .main-species-content h2,
+        .bird-content h2 {
+            margin: 0 0 20px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 32px;
+        }
+
+        .main-species-content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 24px;
+        }
+
+        .main-species-content p,
+        .bird-content p {
+            margin-bottom: 17px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        .species-title {
+            text-align: center;
+            margin: 55px auto 45px;
+        }
+
+        .species-title h1 {
+            margin: 0;
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(40px, 6vw, 58px);
+        }
+
+        .main-species {
+            margin-bottom: 60px;
+        }
+
+        .main-species-image {
+            width: 100%;
+            margin-bottom: 35px;
+            background: #f2eee9;
+        }
+
+        .main-species-image img {
+            display: block;
+            width: 100%;
+            max-height: 550px;
+            object-fit: cover;
+        }
+
+        .main-species-content h2,
+        .bird-content h2 {
+            margin: 0 0 20px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 32px;
+        }
+
+        .main-species-content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+        }
+
+        .main-species-content p,
+        .bird-content p {
+            margin-bottom: 17px;
+            color: #555;
+            line-height: 1.85;
+        }
+
+        .bird-section {
+            display: grid;
+            grid-template-columns: 42% 58%;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 70px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bird-section:nth-of-type(even) {
+            grid-template-columns: 58% 42%;
+        }
+
+        .bird-section:nth-of-type(even) .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-of-type(even) .bird-content {
+            order: 1;
+        }
+
+        .bird-image {
+            width: 100%;
+            overflow: hidden;
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+
+        .bird-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .available-link {
+            text-align: center;
+            margin: 10px 0 65px;
+        }
+
+        .available-link a {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #6b4423;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .available-link a:hover {
+            background: #4c3019;
+        }
+
+        .species-contact {
+            margin: 20px 0 80px;
+            padding: 45px 25px;
+            background: #f6f1eb;
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+            line-height: 1.7;
+        }
+         @media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-of-type(even) {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .bird-section:nth-of-type(even) .bird-image,
+            .bird-section:nth-of-type(even) .bird-content {
+                order: initial;
+            }
+
+            .main-species-image img {
+                max-height: 400px;
+            }
+
+            .bird-content h2,
+            .main-species-content h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .species-title {
+                margin-top: 35px;
+            }
+
+            .species-title h1 {
+                font-size: 38px;
+            }
+
+            .main-species-content p,
+            .bird-content p {
+                font-size: 15px;
+            }
+        }
+    </style>
+ 
+       <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH BAR -->
+<div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caiques.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="finches.html"
+                            class="active"
+                        >
+                            Finches
+                        </a>
+                    </li>
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+<main class="species-page">
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="species-title">
+
+        <h1>
+            Finches For Sale
+        </h1>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MAIN FINCH SECTION
+    ================================================== -->
+
+    <section class="main-species">
+
+
+        <div class="main-species-image">
+
+            <!-- FINCHES MAIN IMAGE -->
+
+            <img
+                src="images\finches\Red-billed_firefinch_(Lagonosticta_senegala_senegala)_female.jpg"
+                alt="Finches For Sale"
+            >
+
+        </div>
+
+
+        <div class="main-species-content">
+
+            <h2>
+                Finches
+            </h2>
+
+            <p>
+                Finches are small, colorful and social birds
+                that make excellent companions for people
+                who prefer smaller pets.
+            </p>
+
+            <p>
+                They are relatively low-maintenance and are
+                known for their playful and active nature.
+            </p>
+
+            <p>
+                There are many different varieties and color
+                mutations of finches, giving bird enthusiasts
+                plenty of choices.
+            </p>
+
+
+            <h3>
+                Native/Natural Habitat
+            </h3>
+
+            <p>
+                Finches can be found across many parts of the
+                world and different species have adapted to
+                very different environments.
+            </p>
+
+            <p>
+                Their natural habitats range from dry regions
+                and grasslands to forests and tropical
+                environments.
+            </p>
+
+            <p>
+                Different varieties can be found across
+                North America, South America, Europe, Africa
+                and Asia.
+            </p>
+
+
+            <h3>
+                Personality &amp; Behavior
+            </h3>
+
+            <p>
+                Finches are social birds and generally enjoy
+                the company of other finches.
+            </p>
+
+            <p>
+                They are best suited to environments where
+                they have enough room to fly and move around.
+            </p>
+
+            <p>
+                Unlike many parrots, finches generally do not
+                enjoy frequent handling by humans.
+            </p>
+
+            <p>
+                Keeping compatible finches together can help
+                provide companionship and reduce stress.
+            </p>
+
+            <p>
+                They are active birds that enjoy flying,
+                exploring and interacting with other birds.
+            </p>
+
+
+            <h3>
+                Speech &amp; Sounds
+            </h3>
+
+            <p>
+                Finches are vocal birds, but their sounds are
+                considerably softer than those of many larger
+                parrots.
+            </p>
+
+            <p>
+                Their cheerful chirping and singing can be
+                entertaining without becoming excessively
+                loud.
+            </p>
+
+            <p>
+                Their vocalizations are one reason they can
+                work well for people living in apartments or
+                other shared environments.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AVAILABLE BABIES -->
+<div class="available-link">
+
+        <a href="available-babies.html">
+            SEE AVAILABLE BABIES FOR SALE
+        </a>
+
+    </div>
+
+
+
+    <!-- =================================================
+         GOULDIAN FINCH
+    ================================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE: GOULDIAN FINCH -->
+
+            <img
+                src="images\finches\gould f.jpg"
+                alt="Gouldian Finch"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Gouldian Finch
+            </h2>
+
+            <p>
+                Gouldian Finches are famous for their
+                spectacular combination of bright colors.
+            </p>
+
+            <p>
+                They are also known as Rainbow Finches or
+                Lady Gouldian Finches.
+            </p>
+
+            <p>
+                They are social, intelligent and active birds,
+                although they generally prefer the company of
+                other birds rather than extensive handling.
+            </p>
+
+            <p>
+                Both males and females display beautiful
+                colors, although males are usually more
+                intensely colored.
+            </p>
+
+            <p>
+                Their plumage can include combinations of
+                red, black, yellow, green, purple and blue.
+            </p>
+
+            <p>
+                Gouldian Finches are small birds, generally
+                measuring approximately four to six inches.
+            </p>
+
+            <p>
+                They typically weigh only a few grams and can
+                live for many years when provided with good
+                nutrition and appropriate care.
+            </p>
+
+            <p>
+                Call us at
+                <strong>(732) 764-2473</strong>
+                to ask about Gouldian Finch availability.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ZEBRA FINCH
+    ================================================== -->
+
+    <section class="bird-section">
+        <div class="bird-image">
+
+            <!-- IMAGE: ZEBRA FINCH -->
+
+            <img
+                src="images\finches\Zebra_finches_(7381576302).jpg"
+                alt="Zebra Finches"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Zebra Finches
+            </h2>
+
+            <p>
+                Zebra Finches are among the most popular
+                varieties of finches kept as household pets.
+            </p>
+
+            <p>
+                They are active, playful and attractive small
+                birds.
+            </p>
+
+            <p>
+                Zebra Finches are native to Australia and are
+                especially well adapted to dry environments.
+            </p>
+
+            <p>
+                Their sexes can normally be distinguished by
+                their different markings.
+            </p>
+
+            <p>
+                Males commonly display orange cheek patches,
+                chest markings and distinctive barring, while
+                females have a simpler appearance.
+            </p>
+
+            <p>
+                Both sexes have attractive orange-red beaks.
+            </p>
+
+            <p>
+                They are small birds, normally measuring
+                around ten centimeters and weighing roughly
+                twelve grams.
+            </p>
+
+            <p>
+                Their cheerful chatter makes them enjoyable
+                birds to keep.
+            </p>
+
+            <p>
+                Call us at
+                <strong>(732) 764-2473</strong>
+                to ask about Zebra Finch availability.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EUROPEAN GOLDFINCH
+    ================================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE: EUROPEAN GOLDFINCH -->
+
+            <img
+                src="images\finches\eur gf.jpg"
+                alt="European Goldfinches"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                European Goldfinches
+            </h2>
+
+            <p>
+                European Goldfinches are colorful passerine
+                birds belonging to the finch family.
+            </p>
+
+            <p>
+                They occur naturally across parts of Europe,
+                North Africa and Central Asia.
+            </p>
+
+            <p>
+                Their striking appearance makes them easy to
+                identify.
+            </p>
+
+            <p>
+                They have a red face, black and white head
+                markings and dark wings with yellow sections.
+            </p>
+            <p>
+                They are social and intelligent birds that can
+                enjoy the company of compatible birds.
+            </p>
+
+            <p>
+                Adult European Goldfinches are generally
+                around twelve to fourteen centimeters long.
+            </p>
+
+            <p>
+                Their average weight is approximately
+                fourteen to nineteen grams.
+            </p>
+
+            <p>
+                With proper nutrition and care, they can live
+                for many years.
+            </p>
+
+            <p>
+                Contact us at
+                <strong>(732) 764-2473</strong>
+                to learn about European Goldfinches.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SOCIETY FINCH
+    ================================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE: SOCIETY FINCH -->
+
+            <img
+                src="images\finches\socie f.jpg"
+                alt="Society Finches"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Society Finches
+            </h2>
+
+            <p>
+                Society Finches are particularly well known
+                for their calm and social behavior.
+            </p>
+
+            <p>
+                They are also commonly called Bengalese
+                Finches.
+            </p>
+
+            <p>
+                One of their interesting qualities is their
+                ability to foster and care for chicks.
+            </p>
+
+            <p>
+                They are relatively easy to breed and can
+                coexist peacefully with compatible birds.
+            </p>
+
+            <p>
+                Society Finches occur in many color
+                combinations, including pied, brown, white
+                and other mutations.
+            </p>
+
+            <p>
+                Their sexes are difficult to distinguish
+                visually because males and females have very
+                similar appearances.
+            </p>
+
+            <p>
+                They are small birds, usually measuring
+                approximately four to five inches.
+            </p>
+
+            <p>
+                Their average weight is around fifteen to
+                twenty grams.
+            </p>
+
+            <p>
+                Call
+                <strong>(732) 764-2473</strong>
+                to ask about Society Finch availability.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OWL FINCH
+    ================================================== -->
+
+    <section class="bird-section">
+        <div class="bird-image">
+
+            <!-- IMAGE: OWL FINCH -->
+
+            <img
+                src="images\finches\ow f.jpg"
+                alt="Owl Finches"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Owl Finches
+            </h2>
+
+            <p>
+                Owl Finches are small Australian finches with
+                distinctive facial markings.
+            </p>
+
+            <p>
+                They are also known as Bicheno's Finches.
+            </p>
+
+            <p>
+                Their natural habitat includes dry grasslands
+                and other areas of northern and eastern
+                Australia.
+            </p>
+
+            <p>
+                Their most recognizable colors include brown,
+                white and black.
+            </p>
+
+            <p>
+                They have a pale chest crossed by dark bars
+                and a distinctive face.
+            </p>
+
+            <p>
+                Males and females are difficult to distinguish
+                visually.
+            </p>
+
+            <p>
+                Owl Finches are active and require sufficient
+                room for movement and flight.
+            </p>
+
+            <p>
+                They generally do not enjoy extensive human
+                handling.
+            </p>
+
+            <p>
+                They are small birds, generally measuring
+                around three to four inches.
+            </p>
+
+            <p>
+                Call
+                <strong>(732) 764-2473</strong>
+                to ask about Owl Finch availability.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STRAWBERRY FINCH
+    ================================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE: STRAWBERRY FINCH -->
+
+            <img
+                src="images\finches\straw f.jpg"
+                alt="Strawberry Finch"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Strawberry Finch
+            </h2>
+
+            <p>
+                Strawberry Finches are small birds known for
+                their spectacular coloration.
+            </p>
+
+            <p>
+                They are also commonly known as Red Avadavats.
+            </p>
+
+            <p>
+                They originate primarily from parts of Asia
+                and can adapt well to captivity when properly
+                cared for.
+            </p>
+
+            <p>
+                During breeding periods, males develop an
+                especially vivid red or scarlet appearance.
+            </p>
+
+            <p>
+                Males also have contrasting white spots and
+                dark wings.
+            </p>
+
+            <p>
+                Females have a much more subdued coloration
+                compared with males.
+            </p>
+            <p>
+                Strawberry Finches are active and social and
+                benefit from appropriate companionship and
+                enrichment.
+            </p>
+
+            <p>
+                They are very small birds, generally measuring
+                approximately four inches and weighing only a
+                few grams.
+            </p>
+
+            <p>
+                Contact us at
+                <strong>(732) 764-2473</strong>
+                for information about Strawberry Finches.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For Finches?
+        </h2>
+
+        <p>
+            Call
+            <strong>(732) 764-2473</strong>
+            to ask about current availability.
+        </p>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat: 11:00am-8:00pm
+            </p>
+
+            <p>
+                Sun: 12pm - 5pm
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

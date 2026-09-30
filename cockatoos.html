@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cockatoos For Sale | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="Learn about Bare-Eyed, Sulphur Crested, Umbrella and Goffin Cockatoos."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           COCKATOOS PAGE
+        ========================================= */
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .species-hero {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .species-hero img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .species-hero::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, 0.55);
+        }
+
+        .species-hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: #ffffff;
+        }
+
+        .species-hero-content h1 {
+            margin: 0 0 15px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+                font-size:
+                clamp(42px, 6vw, 64px);
+        }
+
+        .species-hero-content p {
+            margin: 0;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .species-intro {
+            max-width: 850px;
+
+            margin:
+                0 auto 70px;
+
+            text-align: center;
+        }
+
+        .species-intro h2 {
+            margin-bottom: 18px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 40px;
+        }
+
+        .species-intro p {
+            color: #555;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           BIRD SECTIONS
+        ========================================= */
+
+        .bird-section {
+            display: grid;
+
+            grid-template-columns:
+                42% 58%;
+
+            gap: 40px;
+
+            align-items: start;
+
+            margin-bottom: 75px;
+
+            padding-bottom: 65px;
+
+            border-bottom:
+                1px solid #dddddd;
+        }
+
+        .bird-section:nth-child(even) {
+            grid-template-columns:
+                58% 42%;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-content {
+            order: 1;
+        }
+
+
+        /* =========================================
+           IMAGE
+        ========================================= */
+
+        .bird-image {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition:
+                transform .3s ease;
+        }
+
+        .bird-image:hover img {
+            transform:
+                scale(1.03);
+        }
+
+
+        /* =========================================
+           CONTENT
+        ========================================= */
+.bird-content h2 {
+            margin:
+                0 0 22px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 31px;
+        }
+
+        .bird-content h3 {
+            margin:
+                25px 0 8px;
+
+            color: #4c3019;
+
+            font-size: 19px;
+        }
+
+        .bird-content p {
+            margin-bottom: 15px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+
+        /* =========================================
+           CONTACT CTA
+        ========================================= */
+
+        .species-contact {
+            margin:
+                20px 0 80px;
+
+            padding:
+                45px 25px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+
+            margin-bottom: 22px;
+        }
+
+        .species-contact a {
+            display: inline-block;
+
+            padding:
+                13px 27px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-weight: bold;
+        }
+
+        .species-contact a:hover {
+            background: #4c3019;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+@media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-child(even) {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
+
+            }
+
+            .bird-section:nth-child(even)
+            .bird-image,
+
+            .bird-section:nth-child(even)
+            .bird-content {
+
+                order: initial;
+
+            }
+
+            .bird-content h2 {
+                font-size: 28px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .species-hero {
+
+                min-height: 290px;
+
+                margin-top: 25px;
+
+            }
+
+            .species-hero-content h1 {
+
+                font-size: 40px;
+
+            }
+
+            .species-intro h2 {
+
+                font-size: 31px;
+
+            }
+
+            .bird-section {
+
+                margin-bottom: 55px;
+
+                padding-bottom: 45px;
+
+            }
+
+            .bird-content p {
+
+                font-size: 15px;
+
+            }
+
+        }
+
+    </style>
+    
+       <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+
+        </a>
+
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+<div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="cockatoos.html"
+                            class="active"
+                        >
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caique.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="species-page">
+
+
+    <!-- HERO -->
+
+    <section class="species-hero">
+
+        <!-- IMAGE:
+             COCKATOOS -->
+
+        <img
+            src="images\cockatoos\Goffins_Cockatoo_in_flight_in_harness.jpg"
+            alt="Cockatoos"
+        >
+
+        <div class="species-hero-content">
+
+            <h1>
+                Cockatoos For Sale
+            </h1>
+
+            <p>
+                Learn more about our Cockatoo species.
+            </p>
+
+        </div>
+
+    </section>
+ <!-- INTRO -->
+
+    <section class="species-intro">
+
+        <h2>
+            Cockatoos
+        </h2>
+
+        <p>
+            Cockatoos are intelligent, social and highly
+            interactive parrots. The original Birds by Joe
+            page features several Cockatoo varieties,
+            including Bare-Eyed, Sulphur Crested, Umbrella
+            and Goffin Cockatoos.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BARE-EYED COCKATOOS
+    ========================================== -->
+
+    <section class="bird-section">
+
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 BARE-EYED COCKATOO -->
+
+            <img
+                src="images\cockatoos\bare ey.jpg"
+                alt="Bare-Eyed Cockatoo"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Bare-Eyed Cockatoos
+            </h2>
+
+
+            <h3>
+                Size
+            </h3>
+
+            <p>
+                Most Bare-Eyed Cockatoos are approximately
+                14 to 16 inches in length, measured from the
+                tip of the tail feathers to the beak.
+            </p>
+
+
+            <h3>
+                Average Lifespan
+            </h3>
+
+            <p>
+                The average Bare-Eyed Cockatoo lives for
+                around 50 years, although they can live much
+                longer under appropriate conditions.
+            </p>
+
+
+            <h3>
+                Temperament
+            </h3>
+
+            <p>
+                Bare-Eyed Cockatoos have a goofy and clownish
+                nature. They are especially known for playing,
+                performing tricks and socializing.
+            </p>
+
+            <p>
+                They generally adjust well to their surroundings
+                and are friendly with their owners. They are
+                also intelligent and known for their talking
+                abilities.
+            </p>
+
+
+            <h3>
+                Colors
+            </h3>
+
+            <p>
+                Their main color is white, with pink or
+                salmon-like patches near their beaks. They
+                also have gray patches around their eyes and
+                horn-colored beaks.
+            </p>
+            <h3>
+                Feeding
+            </h3>
+
+            <p>
+                Bare-Eyed Cockatoos can be prone to obesity
+                and weight problems, so a suitable low-fat
+                diet is important. Leafy greens, root
+                vegetables, fresh fruit, nuts and pellets
+                can form part of their diet, together with
+                plenty of clean drinking water.
+            </p>
+
+
+            <h3>
+                Exercise
+            </h3>
+
+            <p>
+                These birds require plenty of exercise.
+                Around three hours of playtime outside the
+                cage is recommended on the original page.
+                They enjoy moving around with toys and
+                interacting with their owners.
+            </p>
+
+
+            <h3>
+                Bare-Eyed Cockatoos as Pets
+            </h3>
+
+            <p>
+                Although their appearance may seem less
+                colorful than some other parrots, their
+                playful, sweet and intelligent personality
+                makes them popular companion birds.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SULPHUR CRESTED
+    ========================================== -->
+
+    <section class="bird-section">
+
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 SULPHUR CRESTED COCKATOO -->
+
+            <img
+                src="images\cockatoos\Cacatua_galerita_-pet_shop-8b.jpg"
+                alt="Sulphur Crested Cockatoo"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Sulphur Crested Cockatoos
+            </h2>
+
+
+            <p>
+                There are two prominent subspecies of Sulphur
+                Crested Cockatoos: Lesser and Greater Sulphur
+                Crested Cockatoos.
+            </p>
+
+            <p>
+                Greater Sulphur Crested Cockatoos can reach
+                almost 20 inches in length, while Lesser
+                Sulphur Crested Cockatoos are generally around
+                13 to 15 inches.
+            </p>
+
+
+            <h3>
+                Lifespan
+            </h3>
+
+            <p>
+                Sulphur Crested Cockatoos can live for around
+                80 years and may live even longer under the
+                right conditions.
+            </p>
+            <h3>
+                Colors
+            </h3>
+
+            <p>
+                These Cockatoos are predominantly white with
+                black beaks and beautiful yellow crest
+                feathers.
+            </p>
+
+
+            <h3>
+                Feeding and Exercise
+            </h3>
+
+            <p>
+                In captivity, they benefit from nutritious
+                vegetables, fruits, seeds and quality pellets.
+                Their diet needs to be carefully managed to
+                avoid nutritional problems.
+            </p>
+
+            <p>
+                They are active birds and require several
+                hours of exercise and play every day. Open
+                space, stands and perches can help them move,
+                stretch and exercise.
+            </p>
+
+
+            <h3>
+                Sulphur Crested Cockatoos as Pets
+            </h3>
+
+            <p>
+                Their intelligent, active and playful nature
+                makes them highly social companion birds.
+                They require significant attention and
+                interaction from their owners.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         UMBRELLA
+    ========================================== -->
+
+    <section class="bird-section">
+
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 UMBRELLA COCKATOO -->
+
+            <img
+                src="images\cockatoos\umbre co.jpg"
+                alt="Umbrella Cockatoo"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Umbrella Cockatoos
+            </h2>
+
+
+            <h3>
+                Size
+            </h3>
+
+            <p>
+                Umbrella Cockatoos are large parrots and
+                normally reach around 24 inches in length.
+            </p>
+
+
+            <h3>
+                Average Lifespan
+            </h3>
+
+            <p>
+                With appropriate care and attention, these
+                Cockatoos can live for around 80 years in
+                captivity.
+            </p>
+
+
+            <h3>
+                Temperament
+            </h3>
+
+            <p>
+                Umbrella Cockatoos have a gentle and sweet
+                temperament. They can be affectionate and
+                enjoy spending time with their owners.
+            </p>
+
+
+            <h3>
+                Colors
+            </h3>
+
+            <p>
+                They are predominantly white, with yellow
+                shades beneath their wings. They have black
+                or grayish feet and beaks and light bluish
+                eye rings.
+            </p>
+            <h3>
+                Feeding
+            </h3>
+
+            <p>
+                Fresh vegetables, fruits, grains, sprouts,
+                nuts, seeds and quality food are part of the
+                nutritional requirements described on the
+                original page. Fresh water should always be
+                available.
+            </p>
+
+
+            <h3>
+                Exercise
+            </h3>
+
+            <p>
+                Umbrella Cockatoos need plenty of play and
+                exercise time. Strong chewable toys can help
+                provide appropriate beak activity.
+            </p>
+
+            <p>
+                Flying, structured games and free movement
+                can help them exercise their muscles. They
+                also enjoy affection and interaction with
+                their owners.
+            </p>
+
+
+            <h3>
+                Umbrella Cockatoos as Pets
+            </h3>
+
+            <p>
+                Umbrella Cockatoos are calm, social, charming
+                and intelligent birds when properly trained
+                and given sufficient affection and attention.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         GOFFIN
+    ========================================== -->
+
+    <section class="bird-section">
+
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 GOFFIN COCKATOO -->
+
+            <img
+                src="images\cockatoos\goff.jpg"
+                alt="Goffin Cockatoo"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Goffin Cockatoos
+            </h2>
+
+
+            <h3>
+                Size
+            </h3>
+
+            <p>
+                Goffin Cockatoos are among the smallest
+                Cockatoo species, reaching approximately
+                12 to 13 inches from the tail feathers to
+                the beak.
+            </p>
+
+
+            <h3>
+                Average Lifespan
+            </h3>
+            <p>
+                The Goffin Cockatoo can live for an average
+                of around 30 years.
+            </p>
+
+
+            <h3>
+                Temperament
+            </h3>
+
+            <p>
+                Goffin Cockatoos are calm, social, affectionate,
+                playful and inquisitive when given appropriate
+                training and guidance.
+            </p>
+
+            <p>
+                They require regular interaction and attention
+                from their owners, particularly because of
+                their active nature.
+            </p>
+
+
+            <h3>
+                Colors
+            </h3>
+
+            <p>
+                Goffin Cockatoos are predominantly white with
+                pink or salmon-like coloring around the beak.
+            </p>
+
+
+            <h3>
+                Feeding
+            </h3>
+
+            <p>
+                They benefit from a carefully managed,
+                nutritious and relatively low-fat diet.
+                Vegetables, leafy greens, roots, fruits,
+                quality pellets, seeds and grains are among
+                the foods discussed on the original page.
+            </p>
+
+            <p>
+                Proper nutrition is particularly important
+                because this species can experience weight
+                gain problems.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For A Cockatoo?
+        </h2>
+
+        <p>
+            Contact us to learn more about our birds.
+        </p>
+
+        <a href="contact.html">
+            CONTACT US
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+

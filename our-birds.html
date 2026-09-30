@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Birds | Birds by Joe</title>
+
+    <meta name="description"
+          content="Explore the bird species available from Birds by Joe, including Macaws, Cockatoos, Conures, African Greys, Amazons, Budgies, Caiques, Cockatiels, Finches and Parrotlets.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =====================================================
+           OUR BIRDS PAGE
+           ===================================================== */
+
+        .birds-page {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+        }
+
+        .page-banner {
+            min-height: 360px;
+            margin: 35px auto 70px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .page-banner img {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .page-banner::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.48);
+        }
+
+        .page-banner-content {
+            position: relative;
+
+            z-index: 2;
+
+            color: #ffffff;
+
+            padding: 30px;
+        }
+
+        .page-banner-content h1 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(38px, 6vw, 62px);
+
+            margin-bottom: 12px;
+        }
+
+        .page-banner-content p {
+            font-size: 18px;
+        }
+
+
+        /* INTRO */
+               .birds-introduction {
+            max-width: 850px;
+
+            margin: 0 auto 70px;
+
+            text-align: center;
+        }
+
+        .birds-introduction h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(32px, 5vw, 46px);
+
+            color: #4c3019;
+
+            margin-bottom: 20px;
+        }
+
+        .birds-introduction p {
+            margin-bottom: 15px;
+
+            color: #555555;
+        }
+
+
+        /* SPECIES GRID */
+
+        .species-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+
+            margin-bottom: 90px;
+        }
+
+        .species-card {
+            position: relative;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            border: 1px solid #dddddd;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .species-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .species-card-image {
+            overflow: hidden;
+
+            background: #eeeeee;
+        }
+
+        .species-card-image img {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease;
+        }
+
+        .species-card:hover
+        .species-card-image img {
+            transform: scale(1.05);
+        }
+
+        .species-card-content {
+            padding: 24px;
+
+            text-align: center;
+        }
+
+        .species-card-content h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 27px;
+
+            color: #4c3019;
+
+            margin-bottom: 10px;
+        }
+
+        .species-card-content p {
+            color: #666666;
+
+            font-size: 15px;
+
+            margin-bottom: 15px;
+        }
+
+        .species-button {
+            display: inline-block;
+
+            padding: 10px 20px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition:
+                background 0.3s ease;
+        }
+
+        .species-button:hover {
+            background: #4d2f17;
+        }
+
+
+        /* FEATURED INFORMATION */
+
+        .bird-care-section {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            margin-bottom: 90px;
+
+            background: #f6f1eb;
+        }
+
+        .bird-care-image {
+            min-height: 450px;
+        }
+
+        .bird-care-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .bird-care-content {
+            padding: 50px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .bird-care-content h2 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 40px;
+
+            color: #4c3019;
+
+            margin-bottom: 20px;
+        }
+
+        .bird-care-content p {
+            color: #555555;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+           @media (max-width: 900px) {
+
+            .species-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .bird-care-section {
+                grid-template-columns: 1fr;
+            }
+
+            .bird-care-image {
+                min-height: 350px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .page-banner {
+                min-height: 280px;
+
+                margin-top: 25px;
+
+                margin-bottom: 50px;
+            }
+
+            .page-banner-content h1 {
+                font-size: 40px;
+            }
+
+            .page-banner-content p {
+                font-size: 15px;
+            }
+
+            .birds-introduction {
+                margin-bottom: 50px;
+            }
+
+            .species-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                margin-bottom: 60px;
+            }
+
+            .species-card-content {
+                padding: 20px;
+            }
+
+            .bird-care-content {
+                padding: 35px 25px;
+            }
+
+            .bird-care-content h2 {
+                font-size: 32px;
+            }
+
+        }
+     </style>
+ 
+       <!-- Smartsupp Live Chat script -->
+     <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+     </script>
+
+</head>
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+
+            <!-- IMAGE: LOGO -->
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe Logo">
+
+        </a>
+
+
+        <a
+            href="tel:7327642473"
+            class="header-phone">
+
+            (732) 764-2473
+
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search website">
+
+            <button
+                type="submit"
+                aria-label="Search">
+
+                🔍
+
+            </button>
+
+        </form>
+
+
+        <div
+            id="searchResults"
+            class="search-results">
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+<nav
+        class="main-navigation"
+        id="mainNavigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="our-birds.html">
+
+                    BIRD SPECIES
+                    <span>▾</span>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#cockatoos">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#conures">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#african-grey">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#amazons">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#budgies">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#caique">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#cockatiels">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#finches">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#parrotlets">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#others">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+                </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+
+                    SHOP ONLINE
+                    <span>▾</span>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+     ========================================================= -->
+     <main class="birds-page">
+
+
+    <!-- =====================================================
+         PAGE BANNER
+         ====================================================== -->
+
+    <section class="page-banner">
+
+        <!-- IMAGE: BIRD SPECIES BANNER -->
+
+        <img
+            src="images\finches\Tricoloured_Parrot_Finch_RWD2.jpg"
+            alt="Bird species">
+
+        <div class="page-banner-content">
+
+            <h1>
+                Our Birds
+            </h1>
+
+            <p>
+                Discover our beautiful selection of birds.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ====================================================== -->
+
+    <section class="birds-introduction">
+
+        <h2>
+            Bird Species
+        </h2>
+
+        <p>
+            Birds by Joe specializes in hand raised baby
+            parrots and other companion birds.
+        </p>
+
+        <p>
+            We specialize in African Greys, Amazons,
+            Caiques, Conures, Pionus, Cape Parrots,
+            Cockatoos and Macaws.
+        </p>
+
+        <p>
+            We also raise smaller birds such as Finches,
+            Canaries, Parrotlets and Cockatiels.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SPECIES
+         ====================================================== -->
+        <section class="species-grid">
+
+
+        <!-- =================================================
+             MACAWS
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="macaws">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: MACAWS -->
+
+                <img
+                    src="images\macaws\scar m.jpg"
+                    alt="Macaws">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Macaws
+                </h2>
+
+                <p>
+                    Beautiful large parrots known for
+                    their intelligence, colors and
+                    personalities.
+                </p>
+
+                <a
+                    href="macaws.html"
+                    class="species-button">
+
+                    View Macaws
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             COCKATOOS
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="cockatoos">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: COCKATOOS -->
+
+                <img
+                    src="images\cockatoos\483525439_1171658328302322_956484335703517906_n.jpg"
+                    alt="Cockatoos">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Cockatoos
+                </h2>
+
+                <p>
+                    Intelligent and affectionate parrots
+                    with distinctive crests.
+                </p>
+
+                <a
+                    href="cockatoos.html"
+                    class="species-button">
+
+                    View Cockatoos
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             CONURES
+        ================================================== -->
+        <article
+            class="species-card"
+            id="conures">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: CONURES -->
+
+                <img
+                    src="images\conures\peach fc.jpg"
+                    alt="Conures">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Conures
+                </h2>
+
+                <p>
+                    Colorful, playful and energetic
+                    companion parrots.
+                </p>
+
+                <a
+                    href="conures.html"
+                    class="species-button">
+
+                    View Conures
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             AFRICAN GREY
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="african-grey">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: AFRICAN GREY -->
+
+                <img
+                    src="images\african-grey\Psittacus_erithacus_erithacus_-pet_playing_with_bell-6a.jpg"
+                    alt="African Grey">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    African Grey
+                </h2>
+
+                <p>
+                    Highly intelligent parrots known for
+                    their remarkable ability to learn.
+                </p>
+
+                <a
+                    href="african-grey.html"
+                    class="species-button">
+
+                    View African Greys
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             AMAZONS
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="amazons">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: AMAZONS -->
+
+                <img
+                    src="images\amazons\Amazona-xantholora-1.jpg"
+                    alt="Amazon Parrots">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Amazons
+                </h2>
+
+                <p>
+                    Social parrots with colorful plumage
+                    and strong personalities.
+                </p>
+
+                <a
+                    href="amazons.html"
+                    class="species-button">
+
+                    View Amazons
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BUDGIES
+        ================================================== -->
+        <article
+            class="species-card"
+            id="budgies">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: BUDGIES -->
+
+                <img
+                    src="images\budgies\Budgerigar_(Melopsittacus_undulatus).jpg"
+                    alt="Budgies">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Budgies
+                </h2>
+
+                <p>
+                    Small, colorful and friendly birds
+                    that make wonderful companions.
+                </p>
+
+                <a
+                    href="budgies.html"
+                    class="species-button">
+
+                    View Budgies
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             CAIQUE
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="caique">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: CAIQUE -->
+
+                <img
+                    src="images\caiques\Pionites_leucogaster_-Parque_das_Aves,_Foz_do_Iguacu,_Brazil_-five-8a.jpg"
+                    alt="Caique">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Caique
+                </h2>
+
+                <p>
+                    Playful and energetic parrots with
+                    distinctive coloring.
+                </p>
+
+                <a
+                    href="caiques.html"
+                    class="species-button">
+
+                    View Caiques
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             COCKATIELS
+        ================================================== -->
+<article
+            class="species-card"
+            id="cockatiels">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: COCKATIELS -->
+
+                <img
+                    src="images\cockatiels\Nymphicus_hollandicus_DT_-Z_Cóndor-_0803_(2)_(20859406125).jpg"
+                    alt="Cockatiels">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Cockatiels
+                </h2>
+
+                <p>
+                    Friendly and affectionate companion
+                    birds with distinctive crests.
+                </p>
+
+                <a
+                    href="cockatiels.html"
+                    class="species-button">
+
+                    View Cockatiels
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             FINCHES
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="finches">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: FINCHES -->
+
+                <img
+                    src="images\finches\Zebra_finch_(7381576498).jpg"
+                    alt="Finches">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Finches
+                </h2>
+
+                <p>
+                    Small active birds known for their
+                    cheerful behavior and songs.
+                </p>
+
+                <a
+                    href="finches.html"
+                    class="species-button">
+
+                    View Finches
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             PARROTLETS
+        ================================================== -->
+
+        <article
+            class="species-card"
+            id="parrotlets">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: PARROTLETS -->
+
+                <img
+                    src="images\parrotlets\469166345_1088753042705210_3347776120833121410_n.jpg"
+                    alt="Parrotlets">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Parrotlets
+                </h2>
+
+                <p>
+                    Small parrots with big personalities
+                    and colorful appearances.
+                </p>
+
+                <a
+                    href="parrotlets.html"
+                    class="species-button">
+
+                    View Parrotlets
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OTHERS
+        ================================================== -->
+<article
+            class="species-card"
+            id="others">
+
+            <div class="species-card-image">
+
+                <!-- IMAGE: OTHER BIRDS -->
+
+                <img
+                    src="images\cockatoos\Goffins_Cockatoo_in_flight_in_harness.jpg"
+                    alt="Other Birds">
+
+            </div>
+
+
+            <div class="species-card-content">
+
+                <h2>
+                    Others
+                </h2>
+
+                <p>
+                    Explore additional bird species and
+                    varieties available from Birds by Joe.
+                </p>
+
+                <a
+                    href="others.html"
+                    class="species-button">
+
+                    View Birds
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BIRD CARE SECTION
+         ====================================================== -->
+
+    <section class="bird-care-section">
+
+
+        <div class="bird-care-image">
+
+            <!-- IMAGE: BIRD CARE -->
+
+            <img
+                src="images\parrotlets\Female_Blue_and_Male_Green_Pacific_Parrotlets.jpg"
+                alt="Bird care">
+
+        </div>
+
+
+        <div class="bird-care-content">
+
+            <h2>
+                Hand Raised &amp; Socialized
+            </h2>
+
+            <p>
+                Our baby birds are hand-raised, nurtured
+                and socialized with both humans and other
+                birds.
+            </p>
+
+            <p>
+                We believe that proper care, nutrition and
+                socialization are important in raising
+                healthy companion birds.
+            </p>
+
+            <p>
+                Baby birds are abundance weaned and allowed
+                to fully fledge.
+            </p>
+
+            <a
+                href="about.html"
+                class="primary-button">
+
+                LEARN MORE
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+    <footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <!-- IMAGE: FOOTER LOGO -->
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe Logo"
+                class="footer-logo">
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+ 

@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="Learn more about Birds by Joe and our experience with hand raised baby parrots."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =====================================================
+           ABOUT PAGE
+           ===================================================== */
+
+        .about-page {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .about-hero {
+            position: relative;
+            min-height: 400px;
+
+            margin: 35px auto 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .about-hero img {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .about-hero::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: rgba(0, 0, 0, .52);
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+            color: #fff;
+
+            padding: 30px;
+        }
+
+        .about-hero-content h1 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(40px, 6vw, 64px);
+
+            margin-bottom: 12px;
+        }
+
+        .about-hero-content p {
+            font-size: 18px;
+        }
+/* =====================================================
+           INTRODUCTION
+           ===================================================== */
+
+        .about-intro {
+            max-width: 850px;
+
+            margin: 0 auto 80px;
+
+            text-align: center;
+        }
+
+        .about-intro h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: clamp(32px, 5vw, 46px);
+
+            margin-bottom: 20px;
+        }
+
+        .about-intro p {
+            color: #555;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           STORY SECTION
+           ===================================================== */
+
+        .about-story {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            margin-bottom: 90px;
+        }
+
+        .about-story-image {
+            overflow: hidden;
+        }
+
+        .about-story-image img {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .about-story-content h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 40px;
+
+            margin-bottom: 20px;
+        }
+
+        .about-story-content p {
+            color: #555;
+
+            line-height: 1.8;
+
+            margin-bottom: 17px;
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+           ===================================================== */
+           .about-experience {
+            padding: 75px 8%;
+
+            margin-bottom: 90px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .about-experience h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 40px;
+
+            margin-bottom: 18px;
+        }
+
+        .about-experience > p {
+            max-width: 800px;
+
+            margin: 0 auto 45px;
+
+            color: #555;
+
+            line-height: 1.8;
+        }
+
+        .experience-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .experience-box {
+            padding: 30px 22px;
+
+            background: #fff;
+
+            border:
+                1px solid #ddd;
+        }
+
+        .experience-box .number {
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #6b4423;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 42px;
+
+            font-weight: bold;
+        }
+
+        .experience-box h3 {
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .experience-box p {
+            color: #666;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           HAND RAISED BABIES
+           ===================================================== */
+
+        .about-babies {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            margin-bottom: 90px;
+        }
+
+        .about-babies-content h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 40px;
+
+            margin-bottom: 20px;
+        }
+
+        .about-babies-content p {
+            color: #555;
+
+            line-height: 1.8;
+
+            margin-bottom: 16px;
+        }
+
+        .about-babies-content ul {
+            margin:
+                20px 0 0 20px;
+        }
+
+        .about-babies-content li {
+            color: #555;
+
+            margin-bottom: 10px;
+        }
+
+        .about-babies-image {
+            overflow: hidden;
+        }
+
+        .about-babies-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+        }
+
+
+        /* =====================================================
+           VALUES
+           ===================================================== */
+           .about-values {
+            margin-bottom: 90px;
+
+            text-align: center;
+        }
+
+        .about-values h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 40px;
+
+            margin-bottom: 40px;
+        }
+
+        .values-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .value-card {
+            padding: 30px 20px;
+
+            border:
+                1px solid #ddd;
+
+            background: #fff;
+        }
+
+        .value-card h3 {
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #666;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           CALL TO ACTION
+           ===================================================== */
+
+        .about-cta {
+            position: relative;
+
+            margin-bottom: 90px;
+
+            min-height: 350px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            text-align: center;
+        }
+
+        .about-cta img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .about-cta::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, .55);
+        }
+
+        .about-cta-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 700px;
+
+            padding: 30px;
+
+            color: #fff;
+        }
+
+        .about-cta-content h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-cta-content p {
+            margin-bottom: 25px;
+
+            line-height: 1.7;
+        }
+
+        .about-cta-content a {
+            display: inline-block;
+
+            padding:
+                13px 25px;
+
+            background: #fff;
+
+            color: #4c3019;
+
+            font-weight: 700;
+
+            transition: .3s ease;
+        }
+
+        .about-cta-content a:hover {
+            background: #6b4423;
+
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+ @media (max-width: 900px) {
+
+            .about-story,
+            .about-babies {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .experience-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .values-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .about-hero {
+                min-height: 300px;
+
+                margin-top: 25px;
+            }
+
+            .about-hero-content h1 {
+                font-size: 40px;
+            }
+
+            .about-hero-content p {
+                font-size: 15px;
+            }
+
+            .about-story-content h2,
+            .about-babies-content h2,
+            .about-experience h2,
+            .about-values h2 {
+                font-size: 31px;
+            }
+
+            .experience-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-experience {
+                padding:
+                    50px 25px;
+            }
+
+            .about-cta-content h2 {
+                font-size: 32px;
+            }
+
+        }
+
+     </style>
+       <!-- Smartsupp Live Chat script -->
+   <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe Logo"
+            >
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+<div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search website"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="our-birds.html">
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="our-birds.html#macaws">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatoos">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#conures">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#african-grey">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#amazons">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#budgies">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#caique">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatiels">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#finches">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#parrotlets">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html" class="active">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main class="about-page">
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="about-hero">
+
+        <!-- IMAGE:
+             ABOUT HERO -->
+<img
+            src="images\finches\Erlenzeisig_Spinus_spinus_female.jpg"
+            alt="Birds by Joe"
+        >
+
+        <div class="about-hero-content">
+
+            <h1>
+                About Us
+            </h1>
+
+            <p>
+                Passionate about birds. Dedicated to their care.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRO
+         ===================================================== -->
+
+    <section class="about-intro">
+
+        <h2>
+            Birds by Joe
+        </h2>
+
+        <p>
+            Welcome to Birds by Joe, where our passion for
+            beautiful companion birds is at the heart of
+            everything we do.
+        </p>
+
+        <p>
+            We specialize in hand raised baby parrots and
+            provide a selection of birds, supplies and
+            information for bird lovers.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OUR STORY
+         ===================================================== -->
+
+    <section class="about-story">
+
+        <div class="about-story-image">
+
+            <!-- IMAGE:
+                 OWNER / STORE / BIRDS -->
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe story"
+            >
+
+        </div>
+
+
+        <div class="about-story-content">
+
+            <h2>
+                Our Story
+            </h2>
+
+            <p>
+                Birds have always been more than just pets.
+                They are intelligent, social and remarkable
+                companions.
+            </p>
+
+            <p>
+                Our goal is to provide customers with healthy,
+                well cared for birds while helping new bird
+                owners understand the commitment and care
+                involved in keeping a companion bird.
+            </p>
+
+            <p>
+                From selecting the right species to providing
+                appropriate food, cages and accessories, we
+                strive to make the experience as enjoyable
+                and informative as possible.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPERIENCE
+         ===================================================== -->
+
+    <section class="about-experience">
+
+        <h2>
+            Experience &amp; Dedication
+        </h2>
+
+        <p>
+            Our approach is based on careful attention to
+            the birds in our care and a commitment to helping
+            customers find the right companion for their
+            lifestyle.
+        </p>
+
+
+        <div class="experience-grid">
+
+
+            <div class="experience-box">
+
+                <span class="number">
+                    01
+                </span>
+
+                <h3>
+                    Quality Care
+                </h3>
+
+                <p>
+                    Birds receive attentive care and
+                    appropriate daily handling.
+                </p>
+
+            </div>
+
+
+            <div class="experience-box">
+
+                <span class="number">
+                    02
+                </span>
+
+                <h3>
+                    Hand Raised
+                </h3>
+
+                <p>
+                    We focus on providing hand raised
+                    baby parrots.
+                </p>
+
+            </div>
+            <div class="experience-box">
+
+                <span class="number">
+                    03
+                </span>
+
+                <h3>
+                    Customer Support
+                </h3>
+
+                <p>
+                    We help customers understand the
+                    needs of their new companion.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BABY PARROTS
+         ===================================================== -->
+
+    <section class="about-babies">
+
+
+        <div class="about-babies-content">
+
+            <h2>
+                Hand Raised Baby Parrots
+            </h2>
+
+            <p>
+                A well socialized young bird can become a
+                wonderful companion when given proper care,
+                attention and training.
+            </p>
+
+            <p>
+                We take the development and socialization of
+                young parrots seriously and encourage every
+                prospective owner to learn about the species
+                before making a decision.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Individual attention
+                </li>
+
+                <li>
+                    Socialization and handling
+                </li>
+
+                <li>
+                    Species-specific care
+                </li>
+
+                <li>
+                    Guidance for new owners
+                </li>
+
+                <li>
+                    Quality food and supplies
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="about-babies-image">
+
+            <!-- IMAGE:
+                 HAND RAISED BABY PARROT -->
+
+            <img
+                src="images\parrotlets\139564169_230974438483079_5588468727232834040_n.jpg"
+                alt="Hand raised baby parrot"
+            >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VALUES
+         ===================================================== -->
+
+    <section class="about-values">
+
+        <h2>
+            What We Believe
+        </h2>
+        <div class="values-grid">
+
+
+            <div class="value-card">
+
+                <h3>
+                    Care
+                </h3>
+
+                <p>
+                    Every bird deserves proper care,
+                    attention and respect.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    We aim to provide quality birds,
+                    products and information.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <h3>
+                    Education
+                </h3>
+
+                <p>
+                    Understanding a bird's needs is an
+                    important part of responsible ownership.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <h3>
+                    Relationships
+                </h3>
+
+                <p>
+                    We want customers and their birds to
+                    build long-lasting relationships.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section class="about-cta">
+
+        <!-- IMAGE:
+             BIRDS / STORE / CUSTOMER -->
+
+        <img
+            src="images\african-grey\Psittacus_erithacus_-_Vogelburg_Weilrod_02.jpg"
+            alt="Birds by Joe"
+        >
+
+
+        <div class="about-cta-content">
+
+            <h2>
+                Looking for Your Next Feathered Companion?
+            </h2>
+
+            <p>
+                Explore our available birds or contact us
+                for more information.
+            </p>
+
+            <a href="available-babies.html">
+                VIEW AVAILABLE BABIES
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+     <footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe Logo"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+    </div>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
+

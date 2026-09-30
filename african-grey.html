@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>African Grey For Sale | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="African Grey parrots including Timneh and Congo African Grey."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           AFRICAN GREY PAGE
+        ========================================= */
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .species-hero {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .species-hero img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .species-hero::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .species-hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: #ffffff;
+        }
+
+        .species-hero-content h1 {
+            margin: 0 0 15px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+                font-size:
+                clamp(42px, 6vw, 64px);
+        }
+
+        .species-hero-content p {
+            margin: 0;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .species-intro {
+            max-width: 850px;
+
+            margin: 0 auto 70px;
+
+            text-align: center;
+        }
+
+        .species-intro h2 {
+            margin-bottom: 18px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 40px;
+        }
+
+        .species-intro p {
+            color: #555;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           BIRD SECTIONS
+        ========================================= */
+
+        .bird-section {
+            display: grid;
+
+            grid-template-columns: 42% 58%;
+
+            gap: 40px;
+
+            align-items: start;
+
+            margin-bottom: 75px;
+
+            padding-bottom: 65px;
+
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .bird-section:nth-child(even) {
+            grid-template-columns: 58% 42%;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-content {
+            order: 1;
+        }
+
+
+        /* =========================================
+           IMAGE
+        ========================================= */
+       .bird-image {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition: transform 0.3s ease;
+        }
+
+        .bird-image:hover img {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================================
+           CONTENT
+        ========================================= */
+
+        .bird-content h2 {
+            margin: 0 0 22px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 31px;
+        }
+
+        .bird-content p {
+            margin-bottom: 17px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .species-contact {
+            margin: 20px 0 80px;
+
+            padding: 45px 25px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+
+            margin-bottom: 22px;
+        }
+
+        .species-contact a {
+            display: inline-block;
+
+            padding: 13px 27px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .species-contact a:hover {
+            background: #4c3019;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+     @media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-child(even) {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+            .bird-section:nth-child(even)
+            .bird-image,
+            .bird-section:nth-child(even)
+            .bird-content {
+
+                order: initial;
+            }
+
+            .bird-content h2 {
+                font-size: 28px;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .species-hero {
+                min-height: 290px;
+
+                margin-top: 25px;
+            }
+
+            .species-hero-content h1 {
+                font-size: 40px;
+            }
+
+            .species-intro h2 {
+                font-size: 31px;
+            }
+
+            .bird-section {
+                margin-bottom: 55px;
+
+                padding-bottom: 45px;
+            }
+
+            .bird-content p {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+     
+       <!-- Smartsupp Live Chat script -->
+   <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+
+        </a>
+
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+<div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="african-grey.html"
+                            class="active"
+                        >
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caique.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+<main class="species-page">
+
+
+    <!-- HERO -->
+
+    <section class="species-hero">
+
+        <!-- REPLACE WITH CLIENT IMAGE:
+             AFRICAN GREY -->
+
+        <img
+            src="images\african-grey\3_African_grey_parrots_01.jpg"
+            alt="African Grey Parrot"
+        >
+
+        <div class="species-hero-content">
+
+            <h1>
+                African Grey For Sale
+            </h1>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="species-intro">
+
+        <h2>
+            African Grey Parrots
+        </h2>
+
+        <p>
+            African Grey parrots are intelligent and highly
+            popular companion birds. The original page
+            features the two principal varieties:
+            Timneh African Grey and Congo African Grey.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TIMNEH AFRICAN GREY
+    ========================================== -->
+
+    <section class="bird-section">
+
+
+        <div class="bird-image">
+
+            <!-- REPLACE WITH CLIENT IMAGE:
+                 TIMNEH AFRICAN GREY -->
+
+            <img
+                src="images\african-grey\timneh.jpg"
+                alt="Timneh African Grey"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Timneh African Grey
+            </h2>
+
+            <p>
+                The Timneh African Grey is one of the two
+                principal African Grey varieties. It is
+                generally smaller than the Congo variety.
+            </p>
+
+            <p>
+                Timneh Greys are known for their darker grey
+                coloration. The upper chest, head and back
+                can have particularly dark grey feathers,
+                while the abdomen has contrasting lighter
+                grey areas.
+            </p>
+
+            <p>
+                The head can show light scalloped markings,
+                while the darker feathers may have subtle
+                bluish tones.
+            </p>
+
+            <p>
+                The tail commonly displays maroon, dark red
+                and brown coloration. The beak can contain
+                pink and black coloring, with the lower
+                mandible being black.
+            </p>
+
+            <p>
+                Timneh African Greys are smaller than Congo
+                African Greys. The original page describes
+                them as approximately 9 to 11 inches in
+                overall body length, with a wingspan of
+                roughly 13 to 15 inches and a weight of
+                approximately 250g to 375g.
+            </p>
+
+            <p>
+                Contact us at
+                <strong>(732) 764-2473</strong>
+                to find out about Timneh African Greys
+                currently available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONGO AFRICAN GREY
+    ========================================== -->
+<section class="bird-section">
+
+
+        <div class="bird-image">
+
+            <!-- REPLACE WITH CLIENT IMAGE:
+                 CONGO AFRICAN GREY -->
+
+            <img
+                src="images\african-grey\African_grey_parrot,_Psittacus_erithacus_02.jpg"
+                alt="Congo African Grey"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Congo African Grey
+            </h2>
+
+            <p>
+                The Congo African Grey is another major
+                variety of African Grey parrot and is
+                generally larger than the Timneh.
+            </p>
+
+            <p>
+                One of its most noticeable characteristics
+                is its bright red tail, which provides a
+                strong contrast against its predominantly
+                grey body.
+            </p>
+
+            <p>
+                Congo African Greys can also be associated
+                with regional names such as Cameroon, Angola
+                and Togo Greys.
+            </p>
+
+            <p>
+                Their body feathers range from dark grey
+                through lighter silvery shades. Whitish
+                edging can appear around the feathers,
+                particularly toward the head and chest.
+            </p>
+
+            <p>
+                The wings and primary coverts are generally
+                very dark, sometimes appearing almost black.
+            </p>
+
+            <p>
+                The eyes have prominent light skin patches.
+                A phenomenon sometimes called "blushing"
+                can cause these normally pale areas to take
+                on a pinkish appearance.
+            </p>
+
+            <p>
+                The nails and toes are black, while the
+                brilliant reddish tail is one of the most
+                distinctive features of the Congo African
+                Grey.
+            </p>
+
+            <p>
+                Contact us at
+                <strong>(732) 764-2473</strong>
+                to ask about Congo African Greys currently
+                available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For An African Grey?
+        </h2>
+
+        <p>
+            Contact us to find out about available African
+            Grey parrots.
+        </p>
+
+        <a href="contact.html">
+            CONTACT US
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+

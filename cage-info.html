@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cage Information | Birds by Joe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* ==============================
+           CAGE INFO PAGE
+        ============================== */
+
+        .cage-page {
+            width: min(1200px, 92%);
+            margin: auto;
+        }
+
+        .cage-hero {
+            position: relative;
+            min-height: 360px;
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+            background: #4c3019;
+        }
+
+        .cage-hero img {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .cage-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: rgba(0,0,0,.55);
+        }
+
+        .cage-hero-content {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+            color: white;
+
+            padding: 30px;
+        }
+
+        .cage-hero-content h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(40px, 6vw, 62px);
+            margin-bottom: 12px;
+        }
+
+        .cage-hero-content p {
+            font-size: 18px;
+        }
+
+
+        /* INTRO */
+
+        .cage-intro {
+            max-width: 850px;
+            margin: 0 auto 70px;
+            text-align: center;
+        }
+
+        .cage-intro h2 {
+            color: #4c3019;
+            font-family: Georgia, serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cage-intro p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+
+        /* SIZE GUIDE */
+ .cage-guide {
+            margin-bottom: 80px;
+        }
+
+        .cage-guide h2 {
+            color: #4c3019;
+            font-family: Georgia, serif;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .cage-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .cage-table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+        }
+
+        .cage-table th,
+        .cage-table td {
+            padding: 16px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .cage-table th {
+            background: #4c3019;
+            color: white;
+        }
+
+        .cage-table tr:nth-child(even) {
+            background: #f6f1eb;
+        }
+
+
+        /* SPECIES CARDS */
+
+        .species-cages {
+            margin-bottom: 90px;
+        }
+
+        .species-cages > h2 {
+            text-align: center;
+            color: #4c3019;
+            font-family: Georgia, serif;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cage-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .cage-card {
+            border: 1px solid #ddd;
+            background: white;
+            overflow: hidden;
+        }
+
+        .cage-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cage-card-content {
+            padding: 25px;
+        }
+
+        .cage-card h3 {
+            color: #4c3019;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .cage-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+
+        /* IMPORTANT TIPS */
+
+        .cage-tips {
+            background: #f6f1eb;
+            padding: 60px 8%;
+            margin-bottom: 90px;
+        }
+
+        .cage-tips h2 {
+            color: #4c3019;
+            font-family: Georgia, serif;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .tip {
+            background: white;
+            padding: 25px;
+            border: 1px solid #ddd;
+        }
+
+        .tip h3 {
+            color: #4c3019;
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+        }
+
+        .tip p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+
+        /* IMAGE SECTION */
+        .cage-photo-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+
+            margin-bottom: 90px;
+        }
+
+        .cage-photo img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .cage-photo-text h2 {
+            color: #4c3019;
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin-bottom: 18px;
+        }
+
+        .cage-photo-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+
+        /* CTA */
+
+        .cage-cta {
+            position: relative;
+            min-height: 320px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+            margin-bottom: 90px;
+        }
+
+        .cage-cta img {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .cage-cta::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: rgba(0,0,0,.58);
+        }
+
+        .cage-cta-content {
+            position: relative;
+            z-index: 2;
+
+            color: white;
+            text-align: center;
+
+            padding: 30px;
+            max-width: 700px;
+        }
+
+        .cage-cta-content h2 {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cage-cta-content p {
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .cage-cta-content a {
+            display: inline-block;
+            padding: 13px 25px;
+
+            background: white;
+            color: #4c3019;
+
+            font-weight: bold;
+        }
+
+        .cage-cta-content a:hover {
+            background: #6b4423;
+            color: white;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+@media (max-width: 900px) {
+
+            .cage-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cage-photo-section {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .cage-hero {
+                min-height: 290px;
+            }
+
+            .cage-hero-content h1 {
+                font-size: 40px;
+            }
+
+            .cage-intro h2,
+            .cage-guide h2,
+            .species-cages > h2,
+            .cage-tips h2,
+            .cage-photo-text h2 {
+                font-size: 31px;
+            }
+
+            .cage-cards,
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cage-tips {
+                padding: 45px 20px;
+            }
+
+            .cage-cta-content h2 {
+                font-size: 31px;
+            }
+
+        }
+
+    </style>
+
+       <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     HEADER
+============================== -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe Logo"
+            >
+
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+<div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search website"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+            <li class="dropdown">
+
+                <a href="our-birds.html">
+                    BIRD SPECIES <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="our-birds.html#macaws">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatoos">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#conures">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#african-grey">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#amazons">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#budgies">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#caique">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatiels">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#finches">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#parrotlets">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="cage-info.html"
+                    class="active"
+                >
+                    CAGE INFO
+                </a>
+            </li>
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                    </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==============================
+     MAIN
+============================== -->
+
+<main class="cage-page">
+
+
+    <!-- HERO -->
+
+    <section class="cage-hero">
+
+        <!-- IMAGE:
+             CAGE INFORMATION BANNER -->
+
+        <img
+            src="images\cage info\budg.jpg"
+            alt="Bird cage information"
+        >
+
+        <div class="cage-hero-content">
+
+            <h1>
+                Cage Information
+            </h1>
+
+            <p>
+                Choosing the right home for your feathered companion
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="cage-intro">
+
+        <h2>
+            Choosing The Right Cage
+        </h2>
+
+        <p>
+            Choosing an appropriate cage is one of the most
+            important decisions you can make for your bird.
+            The cage should provide enough room for movement,
+            exercise, feeding and comfortable resting.
+        </p>
+
+        <p>
+            Different species have different requirements,
+            so always consider the bird's size, activity level,
+            beak strength and spacing requirements before
+            purchasing a cage.
+        </p>
+
+    </section>
+
+
+
+    <!-- SIZE GUIDE -->
+
+    <section class="cage-guide">
+
+        <h2>
+            General Cage Size Guide
+        </h2>
+
+        <div class="cage-table-wrapper">
+
+            <table class="cage-table">
+
+                <thead>
+                    <tr>
+                        <th>
+                            Bird Type
+                        </th>
+
+                        <th>
+                            Suggested Cage
+                        </th>
+
+                        <th>
+                            Bar Spacing
+                        </th>
+
+                        <th>
+                            Important Consideration
+                        </th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Budgies / Small Finches
+                        </td>
+
+                        <td>
+                            Spacious flight cage
+                        </td>
+
+                        <td>
+                            Narrow spacing
+                        </td>
+
+                        <td>
+                            Prevent escape or injury
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Cockatiels
+                        </td>
+
+                        <td>
+                            Medium flight cage
+                        </td>
+
+                        <td>
+                            Species appropriate spacing
+                        </td>
+
+                        <td>
+                            Allow room for flying
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Conures / Caiques
+                        </td>
+
+                        <td>
+                            Medium to large cage
+                        </td>
+
+                        <td>
+                            Appropriate for beak size
+                        </td>
+
+                        <td>
+                            Strong construction
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            African Grey / Amazon
+                        </td>
+
+                        <td>
+                            Large cage
+                        </td>
+
+                        <td>
+                            Appropriate for species
+                        </td>
+
+                        <td>
+                            Strong bars and locks
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Macaws / Large Cockatoos
+                        </td>
+
+                        <td>
+                            Extra-large cage
+                        </td>
+
+                        <td>
+                            Heavy-duty spacing
+                        </td>
+
+                        <td>
+                            Extremely strong construction
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+    <!-- SPECIES -->
+
+    <section class="species-cages">
+
+        <h2>
+            Cage Requirements By Bird
+        </h2>
+
+
+        <div class="cage-cards">
+
+
+            <!-- IMAGE:
+                 BUDGIE CAGE -->
+
+            <article class="cage-card">
+
+                <img
+                    src="images\cage info\budgi.jpg"
+                    alt="Budgie cage"
+                >
+
+                <div class="cage-card-content">
+
+                    <h3>
+                        Budgies
+                    </h3>
+
+                    <p>
+                        Budgies are active birds and benefit
+                        from a cage that provides plenty of
+                        horizontal space for movement and
+                        flying.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- IMAGE:
+                 COCKATIEL CAGE -->
+
+            <article class="cage-card">
+
+                <img
+                    src="images\cage info\cocktie.jpg"
+                    alt="Cockatiel cage"
+                >
+
+                <div class="cage-card-content">
+
+                    <h3>
+                        Cockatiels
+                    </h3>
+
+                    <p>
+                        Choose a spacious cage with enough
+                        room for the bird's long tail and
+                        enough space between perches.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- IMAGE:
+                 CONURE CAGE -->
+
+            <article class="cage-card">
+
+                <img
+                    src="images\cage info\conc.jpg"
+                    alt="Conure cage"
+                >
+
+                <div class="cage-card-content">
+
+                    <h3>
+                        Conures
+                    </h3>
+
+                    <p>
+                        Conures require a strong cage with
+                        adequate room for climbing, playing
+                        and exercising.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- IMAGE:
+                 AFRICAN GREY CAGE -->
+<article class="cage-card">
+
+                <img
+                    src="images\cage info\af g.jpg"
+                    alt="African Grey cage"
+                >
+
+                <div class="cage-card-content">
+
+                    <h3>
+                        African Greys
+                    </h3>
+
+                    <p>
+                        African Greys need a durable,
+                        spacious cage with strong bars and
+                        secure doors.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- IMAGE:
+                 AMAZON CAGE -->
+
+            <article class="cage-card">
+
+                <img
+                    src="images\cage info\ama.jpg"
+                    alt="Amazon parrot cage"
+                >
+
+                <div class="cage-card-content">
+
+                    <h3>
+                        Amazons
+                    </h3>
+
+                    <p>
+                        Provide plenty of room for movement,
+                        climbing and toys while ensuring the
+                        cage is strong enough for the bird's
+                        powerful beak.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- IMAGE:
+                 MACAW CAGE -->
+
+            <article class="cage-card">
+
+                <img
+                    src="images\cage info\mac.jpg"
+                    alt="Macaw cage"
+                >
+
+                <div class="cage-card-content">
+
+                    <h3>
+                        Macaws
+                    </h3>
+
+                    <p>
+                        Large parrots require very spacious
+                        and heavy-duty cages designed for
+                        their size and strength.
+                    </p>
+
+                </div>
+
+            </article>
+</div>
+
+    </section>
+
+
+
+    <!-- IMPORTANT TIPS -->
+
+    <section class="cage-tips">
+
+        <h2>
+            Important Cage Tips
+        </h2>
+
+
+        <div class="tips-grid">
+
+
+            <div class="tip">
+
+                <h3>
+                    Size Matters
+                </h3>
+
+                <p>
+                    Choose the largest practical cage that
+                    fits your available space and your bird's
+                    needs.
+                </p>
+
+            </div>
+
+
+            <div class="tip">
+
+                <h3>
+                    Bar Spacing
+                </h3>
+
+                <p>
+                    Bar spacing must be appropriate for the
+                    species. Incorrect spacing can create a
+                    serious safety risk.
+                </p>
+
+            </div>
+
+
+            <div class="tip">
+
+                <h3>
+                    Strong Construction
+                </h3>
+
+                <p>
+                    Larger parrots need cages made from
+                    durable materials that can withstand
+                    their powerful beaks.
+                </p>
+
+            </div>
+
+
+            <div class="tip">
+
+                <h3>
+                    Secure Doors
+                </h3>
+
+                <p>
+                    Make sure doors and feeding openings are
+                    secure and cannot easily be opened by
+                    an intelligent bird.
+                </p>
+
+            </div>
+
+
+            <div class="tip">
+
+                <h3>
+                    Perches
+                </h3>
+
+                <p>
+                    Provide appropriately sized perches and
+                    vary their position to encourage movement.
+                </p>
+
+            </div>
+
+
+            <div class="tip">
+
+                <h3>
+                    Toys &amp; Enrichment
+                </h3>
+
+                <p>
+                    Birds need appropriate toys and
+                    enrichment to stay active and mentally
+                    stimulated.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+  <!-- PHOTO + INFORMATION -->
+
+    <section class="cage-photo-section">
+
+
+        <div class="cage-photo">
+
+            <!-- IMAGE:
+                 BIRD INSIDE CAGE -->
+
+            <img
+                src="images\cage info\com h.jpg"
+                alt="Parrot inside cage"
+            >
+
+        </div>
+
+
+        <div class="cage-photo-text">
+
+            <h2>
+                A Comfortable Environment
+            </h2>
+
+            <p>
+                A cage should be more than simply a place
+                where your bird is kept. It should provide
+                a safe and comfortable environment where
+                the bird can eat, sleep, play and interact
+                with its surroundings.
+            </p>
+
+            <p>
+                Position the cage in a suitable area away
+                from dangerous drafts, excessive heat and
+                household hazards.
+            </p>
+
+            <p>
+                Always follow species-specific care
+                recommendations when setting up your bird's
+                environment.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cage-cta">
+
+        <!-- IMAGE:
+             CAGE / PARROT -->
+
+        <img
+            src="images\cage info\ncac.jpg"
+            alt="Parrot cage"
+        >
+
+        <div class="cage-cta-content">
+
+            <h2>
+                Need Help Choosing A Cage?
+            </h2>
+
+            <p>
+                Contact us for more information about cages,
+                accessories and supplies for your bird.
+            </p>
+
+            <a href="contact.html">
+                CONTACT US
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe Logo"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Shop Online | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="Shop bird food, seeds, vitamins, toys, perches, stands and other bird supplies."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           SHOP PAGE
+           ===================================================== */
+
+        .shop-page {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           SHOP BANNER
+           ===================================================== */
+
+        .shop-banner {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px auto 65px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .shop-banner img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+           .shop-banner::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, 0.50);
+        }
+
+        .shop-banner-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: #ffffff;
+        }
+
+        .shop-banner-content h1 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(38px, 6vw, 62px);
+
+            margin-bottom: 12px;
+        }
+
+        .shop-banner-content p {
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           INTRO
+           ===================================================== */
+
+        .shop-introduction {
+            max-width: 850px;
+
+            margin:
+                0 auto 60px;
+
+            text-align: center;
+        }
+
+        .shop-introduction h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size:
+                clamp(32px, 5vw, 46px);
+
+            margin-bottom: 18px;
+        }
+
+        .shop-introduction p {
+            color: #555555;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =====================================================
+           SHOP CATEGORY NAVIGATION
+           ===================================================== */
+           .shop-category-navigation {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-bottom: 70px;
+        }
+
+        .shop-category-navigation a {
+            display: inline-block;
+
+            padding:
+                11px 17px;
+
+            border:
+                1px solid #6b4423;
+
+            color: #6b4423;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            transition:
+                all 0.3s ease;
+        }
+
+        .shop-category-navigation a:hover {
+            background: #6b4423;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           SHOP CATEGORY
+           ===================================================== */
+      .shop-category {
+            margin-bottom: 85px;
+        }
+
+        .shop-category-header {
+            display: flex;
+
+            align-items: end;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 30px;
+
+            padding-bottom: 14px;
+
+            border-bottom:
+                1px solid #dddddd;
+        }
+
+        .shop-category-header h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 36px;
+        }
+
+        .shop-category-header p {
+            color: #777777;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           PRODUCT GRID
+           ===================================================== */
+
+        .product-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =====================================================
+           PRODUCT CARD
+           ===================================================== */
+
+        .product-card {
+            overflow: hidden;
+
+            background: #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =====================================================
+           PRODUCT IMAGE
+           ===================================================== */
+           .product-image {
+            position: relative;
+
+            overflow: hidden;
+
+            background: #eeeeee;
+        }
+
+        .product-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease;
+        }
+
+        .product-card:hover
+        .product-image img {
+            transform:
+                scale(1.05);
+        }
+
+
+        /* =====================================================
+           PRODUCT BADGE
+           ===================================================== */
+
+        .product-badge {
+            position: absolute;
+
+            top: 12px;
+            left: 12px;
+
+            z-index: 2;
+
+            padding:
+                6px 10px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           PRODUCT CONTENT
+           ===================================================== */
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 22px;
+
+            margin-bottom: 8px;
+        }
+
+        .product-content p {
+            color: #666666;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            margin-bottom: 13px;
+        }
+
+        .product-price {
+            display: block;
+
+            color: #333333;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           PRODUCT BUTTON
+           ===================================================== */
+
+        .product-button {
+            display: block;
+
+            width: 100%;
+
+            padding:
+                11px 15px;
+                
+            background: #6b4423;
+
+            color: #ffffff;
+
+            border: none;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.3s ease;
+        }
+
+        .product-button:hover {
+            background: #4d2f17;
+        }
+
+
+        /* =====================================================
+           SHOP NOTICE
+           ===================================================== */
+
+        .shop-notice {
+            max-width: 900px;
+
+            margin:
+                0 auto 80px;
+
+            padding:
+                25px 30px;
+
+            background: #f6f1eb;
+
+            border-left:
+                5px solid #6b4423;
+
+            text-align: center;
+        }
+
+        .shop-notice strong {
+            display: block;
+
+            color: #4c3019;
+
+            margin-bottom: 7px;
+        }
+
+        .shop-notice p {
+            color: #555555;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           ORDER / INQUIRY SECTION
+           ===================================================== */
+
+        .shop-order-section {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            margin-bottom: 90px;
+
+            background: #f6f1eb;
+        }
+
+        .shop-order-image {
+            min-height: 450px;
+        }
+
+        .shop-order-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+               .shop-order-content {
+            padding: 50px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .shop-order-content h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 40px;
+
+            margin-bottom: 18px;
+        }
+
+        .shop-order-content p {
+            color: #555555;
+
+            margin-bottom: 13px;
+        }
+
+        .shop-order-form {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+            margin-top: 15px;
+        }
+
+        .shop-order-form input,
+        .shop-order-form select,
+        .shop-order-form textarea {
+            width: 100%;
+
+            padding: 13px;
+
+            border:
+                1px solid #cccccc;
+
+            background: #ffffff;
+
+            outline: none;
+        }
+
+        .shop-order-form textarea {
+            min-height: 110px;
+
+            resize: vertical;
+        }
+
+        .shop-order-form button {
+            width: fit-content;
+
+            padding:
+                13px 25px;
+
+            border: none;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .shop-order-form button:hover {
+            background: #4d2f17;
+        }
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+           @media (max-width: 1000px) {
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .shop-order-section {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-order-image {
+                min-height: 350px;
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .shop-category-header {
+                display: block;
+            }
+
+            .shop-category-header p {
+                margin-top: 7px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 550px) {
+
+            .shop-banner {
+                min-height: 280px;
+
+                margin-top: 25px;
+
+                margin-bottom: 50px;
+            }
+
+            .shop-banner-content h1 {
+                font-size: 40px;
+            }
+
+            .shop-banner-content p {
+                font-size: 15px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .shop-category {
+                margin-bottom: 60px;
+            }
+
+            .shop-category-header h2 {
+                font-size: 31px;
+            }
+
+            .shop-order-content {
+                padding:
+                    35px 25px;
+            }
+
+            .shop-order-content h2 {
+                font-size: 32px;
+            }
+
+        }
+
+     </style>
+     
+       <!-- Smartsupp Live Chat script -->
+     <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+     </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header">
+
+
+    <div class="top-header">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <!-- IMAGE: LOGO -->
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe Logo"
+            >
+
+        </a>
+
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search website"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+
+            <li>
+
+                <a href="index.html">
+                    HOME
+                </a>
+
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="our-birds.html">
+
+                    BIRD SPECIES
+
+                    <span>▾</span>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="our-birds.html#macaws">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatoos">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#conures">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#african-grey">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#amazons">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#budgies">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#caique">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatiels">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#finches">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#parrotlets">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li>
+
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+
+                    SHOP ONLINE
+
+                    <span>▾</span>
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+
+                <a href="about.html">
+                    ABOUT US
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+     <main class="shop-page">
+
+
+    <!-- =====================================================
+         BANNER
+         ===================================================== -->
+
+    <section class="shop-banner">
+
+
+        <!-- IMAGE:
+             SHOP BANNER -->
+
+        <img
+            src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+            alt="Bird supplies and products"
+        >
+
+
+        <div class="shop-banner-content">
+
+            <h1>
+                Shop Online
+            </h1>
+
+            <p>
+                Quality products for your feathered friends.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section class="shop-introduction">
+
+        <h2>
+            Bird Supplies
+        </h2>
+
+        <p>
+            Browse our selection of food, treats,
+            vitamins, toys and accessories for your birds.
+        </p>
+
+        <p>
+            Product availability and pricing may change,
+            so please contact us to confirm current stock.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORY NAVIGATION
+         ===================================================== -->
+
+    <nav class="shop-category-navigation">
+
+        <a href="#seeds">
+            Seeds
+        </a>
+
+        <a href="#food">
+            Food
+        </a>
+
+        <a href="#vitamins">
+            Vitamins
+        </a>
+
+        <a href="#toys">
+            Toys
+        </a>
+
+        <a href="#perches">
+            Perches
+        </a>
+
+        <a href="#stands">
+            Stands
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         SEEDS
+         ===================================================== -->
+
+    <section
+        class="shop-category"
+        id="seeds"
+    >
+
+
+        <div class="shop-category-header">
+
+            <h2>
+                Seeds
+            </h2>
+
+            <p>
+                Seeds and mixes for companion birds.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         SEED PRODUCT -->
+
+                    <img
+                        src="images\shop\seeds\sd mx.jpg"
+                        alt="Bird seed mix"
+                    >
+
+                    <span class="product-badge">
+                        Seeds
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Premium Seed Mix
+                    </h3>
+
+                    <p>
+                        A quality seed mixture suitable
+                        for companion birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Premium Seed Mix"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         PARROT SEED -->
+
+                    <img
+                        src="images\shop\seeds\Bird_seed_(canary).jpg"
+                        alt="Parrot seed"
+                    >
+
+                    <span class="product-badge">
+                        Seeds
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Parrot Seed
+                    </h3>
+
+                    <p>
+                        Seed selection prepared for
+                        parrots and larger birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Parrot Seed"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         SMALL BIRD SEED -->
+
+                    <img
+                        src="images\shop\seeds\Cockatiel_seed_mix_indivudually_prepared.jpg"
+                        alt="Small bird seed"
+                    >
+
+                    <span class="product-badge">
+                        Seeds
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Small Bird Seed
+                    </h3>
+
+                    <p>
+                        Seed selection for smaller
+                        companion birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Small Bird Seed"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+ <!-- =====================================================
+         FOOD
+         ===================================================== -->
+
+    <section
+        class="shop-category"
+        id="food"
+    >
+
+
+        <div class="shop-category-header">
+
+            <h2>
+                Food by the Pound
+            </h2>
+
+            <p>
+                Bird food and nutritional selections.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         BIRD FOOD -->
+
+                    <img
+                        src="images\shop\food-by-pound\Captive_parrots_eat_a_medley_of_comercial_food,_fresh_fruits,_seeds,_nuts_and_vegetables_(31283474566).jpg"
+                        alt="Bird food"
+                    >
+
+                    <span class="product-badge">
+                        Food
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Food
+                    </h3>
+
+                    <p>
+                        Quality food options for
+                        companion birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Food"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         PELLETS -->
+
+                    <img
+                        src="images\shop\food-by-pound\istockphoto-1276714803-612x612.jpg"
+                        alt="Bird pellets"
+                    >
+
+                    <span class="product-badge">
+                        Food
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Pellets
+                    </h3>
+
+                    <p>
+                        Nutritional pellet options for
+                        companion birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Pellets"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         TREATS -->
+
+                    <img
+                        src="images\shop\food-by-pound\Tasty_treats_for_millerbirds_(7033582365).jpg"
+                        alt="Bird treats"
+                    >
+
+                    <span class="product-badge">
+                        Food
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Treats
+                    </h3>
+
+                    <p>
+                        Treats and food options for
+                        your feathered companions.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Treats"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+</div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VITAMINS
+         ===================================================== -->
+
+    <section
+        class="shop-category"
+        id="vitamins"
+    >
+
+
+        <div class="shop-category-header">
+
+            <h2>
+                Vitamins &amp; Minerals
+            </h2>
+
+            <p>
+                Nutritional supplements for birds.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         VITAMINS -->
+
+                    <img
+                        src="images\shop\vitamins-minerals\vitamin.jpg"
+                        alt="Bird vitamins"
+                    >
+
+                    <span class="product-badge">
+                        Vitamins
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Vitamins
+                    </h3>
+
+                    <p>
+                        Vitamin products for supporting
+                        bird nutrition.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Vitamins"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         MINERALS -->
+
+                    <img
+                        src="images\shop\vitamins-minerals\mineral.jpg"
+                        alt="Bird minerals"
+                    >
+
+                    <span class="product-badge">
+                        Minerals
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Minerals
+                    </h3>
+
+                    <p>
+                        Mineral products for companion
+                        bird nutrition.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Minerals"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+            </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TOYS
+         ===================================================== -->
+
+    <section
+        class="shop-category"
+        id="toys"
+    >
+
+
+        <div class="shop-category-header">
+
+            <h2>
+                Toys
+            </h2>
+
+            <p>
+                Toys and enrichment products.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         BIRD TOY -->
+
+                    <img
+                        src="images\shop\toys\bird toys.jpg"
+                        alt="Bird toy"
+                    >
+
+                    <span class="product-badge">
+                        Toys
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Toy
+                    </h3>
+
+                    <p>
+                        Enrichment toy designed to keep
+                        companion birds active.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Toy"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         WOODEN TOY -->
+
+                    <img
+                        src="images\shop\toys\images.jpg"
+                        alt="Wooden bird toy"
+                    >
+
+                    <span class="product-badge">
+                        Toys
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Wooden Toy
+                    </h3>
+
+                    <p>
+                        Wooden enrichment toy for
+                        companion birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Wooden Toy"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+        <!--IMAGE:
+                         PLAY TOY -->
+
+                    <img
+                        src="images\shop\toys\toy.jpg"
+                        alt="Bird play toy"
+                    >
+
+                    <span class="product-badge">
+                        Toys
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Play Toy
+                    </h3>
+
+                    <p>
+                        A colorful toy for play and
+                        enrichment.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Play Toy"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PERCHES
+         ===================================================== -->
+class="shop-category"
+        id="perches"
+    >
+
+
+        <div class="shop-category-header">
+
+            <h2>
+                Perches
+            </h2>
+
+            <p>
+                Perches for bird cages and play areas.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         WOODEN PERCH -->
+
+                    <img
+                        src="images\shop\perches\wood.jpg"
+                        alt="Wooden bird perch"
+                    >
+
+                    <span class="product-badge">
+                        Perches
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Wooden Perch
+                    </h3>
+
+                    <p>
+                        Natural-style perch for
+                        companion bird cages.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Wooden Perch"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         NATURAL PERCH -->
+
+                    <img
+                        src="images\shop\perches\images.jpg"
+                        alt="Natural bird perch"
+                    >
+
+                    <span class="product-badge">
+                        Perches
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Natural Perch
+                    </h3>
+
+                    <p>
+                        Natural perch option for birds.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Natural Perch"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STANDS
+         ===================================================== -->
+
+    <section
+        class="shop-category"
+        id="stands"
+    >
+
+
+        <div class="shop-category-header">
+
+            <h2>
+                Stands
+            </h2>
+
+            <p>
+                Bird stands and play stands.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         BIRD STAND -->
+
+                    <img
+                        src="images\shop\stands\std.jpg"
+                        alt="Bird stand"
+                    >
+
+                    <span class="product-badge">
+                        Stands
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Bird Stand
+                    </h3>
+
+                    <p>
+                        Stand suitable for supervised
+                        bird play and interaction.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Bird Stand"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <!-- IMAGE:
+                         PLAY STAND -->
+
+                    <img
+                        src="images\shop\stands\pl st.jpg"
+                        alt="Bird play stand"
+                    >
+
+                    <span class="product-badge">
+                        Stands
+                    </span>
+
+                </div>
+
+
+                <div class="product-content">
+
+                    <h3>
+                        Play Stand
+                    </h3>
+
+                    <p>
+                        A play area designed for supervised
+                        bird activity.
+                    </p>
+
+                    <span class="product-price">
+                        Price: Contact Us
+                    </span>
+
+                    <a
+                        href="#order"
+                        class="product-button"
+                        data-product="Play Stand"
+                    >
+                        INQUIRE ABOUT PRODUCT
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NOTICE
+         ===================================================== -->
+
+    <section class="shop-notice">
+
+        <strong>
+            Product Availability
+        </strong>
+
+        <p>
+            Products, sizes, quantities and prices may
+            change. Please contact us to confirm current
+            availability before placing an order.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ORDER / INQUIRY SECTION
+         ===================================================== -->
+
+    <section
+        class="shop-order-section"
+        id="order"
+    >
+
+
+        <div class="shop-order-image">
+
+            <!-- IMAGE:
+                 SHOP / CUSTOMER SERVICE -->
+
+            <img
+                src="images\home\mail.jpg"
+                alt="Bird supplies"
+            >
+
+        </div>
+
+
+        <div class="shop-order-content">
+
+
+            <h2>
+                Interested in a Product?
+            </h2>
+
+
+            <p>
+                Tell us which product you are interested
+                in and we will respond with the current
+                availability and information.
+            </p>
+        <!--
+                FRONTEND ONLY.
+
+                This form will later be connected to the
+                owner's email.
+            -->
+
+
+            <form
+                class="shop-order-form"
+                id="shopOrderForm"
+            >
+
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                >
+
+
+                <select
+                    name="product"
+                    id="selectedProduct"
+                    required
+                >
+
+                    <option value="">
+                        Select a Product
+                    </option>
+
+                    <option>
+                        Premium Seed Mix
+                    </option>
+
+                    <option>
+                        Parrot Seed
+                    </option>
+
+                    <option>
+                        Small Bird Seed
+                    </option>
+
+                    <option>
+                        Bird Food
+                    </option>
+
+                    <option>
+                        Bird Pellets
+                    </option>
+
+                    <option>
+                        Bird Treats
+                    </option>
+
+                    <option>
+                        Bird Vitamins
+                    </option>
+
+                    <option>
+                        Bird Minerals
+                    </option>
+
+                    <option>
+                        Bird Toy
+                    </option>
+
+                    <option>
+                        Wooden Toy
+                    </option>
+
+                    <option>
+                        Play Toy
+                    </option>
+
+                    <option>
+                        Wooden Perch
+                    </option>
+
+                    <option>
+                        Natural Perch
+                    </option>
+
+                    <option>
+                        Bird Stand
+                    </option>
+
+                    <option>
+                        Play Stand
+                    </option>
+
+                </select>
+                <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                >
+                    SEND INQUIRY
+                </button>
+
+
+                <div
+                    id="shopOrderSuccess"
+                    hidden
+                ></div>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe Logo"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+    /* =====================================================
+       PRODUCT INQUIRY BUTTONS
+       ===================================================== */
+
+    const productButtons =
+        document.querySelectorAll(
+            ".product-button"
+        );
+
+    const selectedProduct =
+        document.getElementById(
+            "selectedProduct"
+        );
+
+
+    productButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const product =
+                        button.dataset.product;
+
+
+                    if (selectedProduct) {
+
+                        selectedProduct.value =
+                            product;
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       SHOP ORDER FORM
+       ===================================================== */
+const shopOrderForm =
+        document.getElementById(
+            "shopOrderForm"
+        );
+
+    const shopOrderSuccess =
+        document.getElementById(
+            "shopOrderSuccess"
+        );
+
+
+    if (shopOrderForm) {
+
+        shopOrderForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                /*
+                 * Temporary frontend behavior.
+                 *
+                 * Later we will connect this form to
+                 * an email service so the owner's email
+                 * receives the inquiry.
+                 */
+
+
+                if (shopOrderSuccess) {
+
+                    shopOrderSuccess.hidden =
+                        false;
+
+                    shopOrderSuccess.textContent =
+                        "Thank you. Your product inquiry has been received.";
+
+                    shopOrderSuccess.style.marginTop =
+                        "10px";
+
+                    shopOrderSuccess.style.color =
+                        "#4c3019";
+
+                    shopOrderSuccess.style.fontWeight =
+                        "700";
+
+                }
+
+
+                shopOrderForm.reset();
+
+            }
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>
+         
+
+
+
+
+
+

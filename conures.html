@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Conures For Sale | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="Learn about Sun, Jenday, Nanday, Green Cheek, Peach Fronted and Maroon Bellied Conures."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           CONURES PAGE
+        ========================================= */
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* HERO */
+
+        .species-hero {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .species-hero img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .species-hero::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, .55);
+        }
+
+        .species-hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: #ffffff;
+        }
+
+        .species-hero-content h1 {
+            margin: 0 0 15px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+                font-size:
+                clamp(42px, 6vw, 64px);
+        }
+
+        .species-hero-content p {
+            margin: 0;
+
+            font-size: 18px;
+        }
+
+
+        /* INTRO */
+
+        .species-intro {
+            max-width: 850px;
+
+            margin:
+                0 auto 70px;
+
+            text-align: center;
+        }
+
+        .species-intro h2 {
+            margin-bottom: 18px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 40px;
+        }
+
+        .species-intro p {
+            color: #555;
+
+            line-height: 1.8;
+        }
+
+
+        /* BIRD SECTIONS */
+
+        .bird-section {
+            display: grid;
+
+            grid-template-columns:
+                42% 58%;
+
+            gap: 40px;
+
+            align-items: start;
+
+            margin-bottom: 75px;
+
+            padding-bottom: 65px;
+
+            border-bottom:
+                1px solid #dddddd;
+        }
+
+        .bird-section:nth-child(even) {
+            grid-template-columns:
+                58% 42%;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-child(even)
+        .bird-content {
+            order: 1;
+        }
+
+
+        /* IMAGE */
+
+        .bird-image {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition:
+                transform .3s ease;
+        }
+
+        .bird-image:hover img {
+            transform:
+                scale(1.03);
+        }
+/* CONTENT */
+
+        .bird-content h2 {
+            margin:
+                0 0 22px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 31px;
+        }
+
+        .bird-content p {
+            margin-bottom: 15px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+
+        /* CONTACT */
+
+        .species-contact {
+            margin:
+                20px 0 80px;
+
+            padding:
+                45px 25px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+
+            margin-bottom: 22px;
+        }
+
+        .species-contact a {
+            display: inline-block;
+
+            padding:
+                13px 27px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-weight: bold;
+        }
+
+        .species-contact a:hover {
+            background: #4c3019;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-child(even) {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+            .bird-section:nth-child(even)
+            .bird-image,
+            .bird-section:nth-child(even)
+            .bird-content {
+
+                order: initial;
+            }
+
+            .bird-content h2 {
+                font-size: 28px;
+            }
+
+        }
+ @media (max-width: 550px) {
+
+            .species-hero {
+
+                min-height: 290px;
+
+                margin-top: 25px;
+            }
+
+            .species-hero-content h1 {
+
+                font-size: 40px;
+            }
+
+            .species-intro h2 {
+
+                font-size: 31px;
+            }
+
+            .bird-section {
+
+                margin-bottom: 55px;
+
+                padding-bottom: 45px;
+            }
+
+            .bird-content p {
+
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+       <!-- Smartsupp Live Chat script -->
+   <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+
+        </a>
+
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+   <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="conures.html"
+                            class="active"
+                        >
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="caique.html">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+                     <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+ <main class="species-page">
+
+
+    <!-- HERO -->
+
+    <section class="species-hero">
+
+        <!-- IMAGE:
+             CONURES -->
+
+        <img
+            src="images\conures\135495522_223295799250943_3309154348826220936_n.jpg"
+            alt="Conures"
+        >
+
+        <div class="species-hero-content">
+
+            <h1>
+                Conure For Sale
+            </h1>
+
+            <p>
+                Discover our beautiful Conure species.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="species-intro">
+
+        <h2>
+            Conures
+        </h2>
+
+        <p>
+            Conures are colorful, active and social companion
+            birds. Below are the Conure varieties featured
+            on the Birds by Joe page.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SUN CONURE
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 SUN CONURE -->
+
+            <img
+                src="images\conures\sun c.jpg"
+                alt="Sun Conure"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Sun Conure
+            </h2>
+
+            <p>
+                If you are in the market and looking for
+                stunningly beautiful birds, Sun Conures are
+                among the best options. They have a blend of
+                rich and bold colors all over the body.
+            </p>
+            <p>
+                From yellow to orange, these birds feature
+                bright colors throughout their body, with
+                dark red-orange highlights around the belly
+                and cheeks.
+            </p>
+
+            <p>
+                Their wings feature green splashes over
+                yellow, while the wingtips are bluish. The
+                tail contains both blue and green colors.
+            </p>
+
+            <p>
+                Sun Conures measure around 12 inches on
+                average and weigh approximately 100-130
+                grams. Their average lifespan is around
+                25-30 years.
+            </p>
+
+            <p>
+                They are highly sociable and affectionate
+                birds. They require medium to large bird
+                cages because they are active and social.
+            </p>
+
+            <p>
+                Sun Conures enjoy entertaining their owners
+                with acrobatic tricks and activities. One
+                remarkable quality is their distinctive
+                screeching vocalizations.
+            </p>
+
+            <p>
+                Call us at
+                <strong>732-764-2473</strong>
+                to find out what baby birds are available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         JENDAY
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 JENDAY CONURE -->
+
+            <img
+                src="images\conures\jenday c.jpg"
+                alt="Jenday Conure"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Jenday Conure
+            </h2>
+
+            <p>
+                Jenday Conures are similar to Sun Conures
+                in both appearance and personality.
+            </p>
+
+            <p>
+                Their heads are solid yellowish while their
+                wings and upper body have bright green
+                coloration.
+            </p>
+
+            <p>
+                These birds have a red-orange belly while
+                the tail has a bluish-green color.
+            </p>
+
+            <p>
+                Jenday Conures measure around 12 inches and
+                weigh approximately 100-130 grams. Their
+                average lifespan is around 25-30 years.
+            </p>
+
+            <p>
+                They require a similar cage size to Sun
+                Conures and are highly social and active.
+            </p>
+
+            <p>
+                Jenday Conures enjoy performing tricks and
+                spending time outside their cages with their
+                owners.
+            </p>
+
+        </div>
+
+    </section>
+  <!-- =========================================
+         NANDAY
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 NANDAY CONURE -->
+
+            <img
+                src="images\conures\nanday c.jpg"
+                alt="Nanday Conure"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Nanday Conure
+            </h2>
+
+            <p>
+                Nanday Conures do not have the same vibrant
+                colors as Sun and Jenday Conures, but their
+                personality makes up for it.
+            </p>
+
+            <p>
+                Their head is black while the wings and body
+                are primarily green. Blue colors can be seen
+                around the tail and flight feathers.
+            </p>
+
+            <p>
+                Bright red coloration may also appear around
+                the legs.
+            </p>
+
+            <p>
+                Nanday Conures typically weigh around
+                135-145 grams and have an average lifespan
+                of approximately 25-30 years.
+            </p>
+
+            <p>
+                They are approximately 13 inches long and
+                require an appropriately sized cage with
+                sufficient height.
+            </p>
+
+            <p>
+                They are social and active birds. Smaller,
+                cramped spaces can cause distress and may
+                result in noisy or destructive behavior.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         GREEN CHEEK
+    ========================================== -->
+
+    <section class="bird-section">
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 GREEN CHEEK CONURE -->
+
+            <img
+                src="images\conures\green cc.jpg"
+                alt="Green Cheek Conure"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Green Cheek Conure
+            </h2>
+
+            <p>
+                The Green Cheek Conure has green coloration
+                across much of its body, together with grey
+                breasts and maroon tails.
+            </p>
+
+            <p>
+                Their primary wing feathers are bluish and
+                their cheeks are green. The head is darker
+                than the rest of the body.
+            </p>
+
+            <p>
+                Mutations are common when Green Cheek
+                Conures are raised in captivity. Color
+                variations can include yellow, turquoise
+                and cinnamon.
+            </p>
+
+            <p>
+                They are approximately 10 inches long and
+                weigh around 65-85 grams.
+            </p>
+
+            <p>
+                Their average lifespan is around 15 years,
+                although they can live longer with proper
+                care.
+            </p>
+
+            <p>
+                Rather than producing frequent screeches,
+                these birds are more accustomed to producing
+                sharp whistles.
+            </p>
+
+            <p>
+                Green Cheek Conures have a quiet and friendly
+                nature while still enjoying attention, making
+                them suitable for apartments and homes.
+            </p>
+
+            <p>
+                Call us at
+                <strong>732-764-2473</strong>
+                to find out if we have a Green Cheek Conure
+                available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PEACH FRONTED
+    ========================================== -->
+<section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 PEACH FRONTED CONURE -->
+
+            <img
+                src="images\conures\peach fc.jpg"
+                alt="Peach Fronted Conure"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Peach Fronted Conure
+            </h2>
+
+            <p>
+                Peach Fronted Conures have green coloration
+                across their upper body together with
+                greyish-green breasts.
+            </p>
+
+            <p>
+                Their belly has a light green coloration.
+                Their green wings have black tips while the
+                tail is blue and green.
+            </p>
+
+            <p>
+                The head is completely green except for the
+                crown, which is bright orange with blue sides
+                around the eye area.
+            </p>
+
+            <p>
+                Their black beak helps distinguish them from
+                Half-Moon and Orange-Fronted Conures.
+            </p>
+
+            <p>
+                Peach Fronted Conures are approximately
+                10 inches long and weigh around 105 grams.
+                Their average lifespan is approximately
+                25-30 years.
+            </p>
+
+            <p>
+                These birds love to play and enjoy outdoor
+                activity. They can make lovely pets for
+                experienced bird owners.
+            </p>
+
+            <p>
+                They are also relatively quiet and do not
+                produce the same screeching sounds as some
+                other Conures, making them suitable for
+                apartment environments.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         MAROON BELLIED
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+            <!-- IMAGE:
+                 MAROON BELLIED CONURE -->
+
+            <img
+                src="images\conures\maroon bc.jpg"
+                alt="Maroon Bellied Conure"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Maroon Bellied Conure
+            </h2>
+
+            <p>
+                Maroon Bellied Conures are small birds with
+                a green-colored body.
+            </p>
+
+            <p>
+                Their breasts feature a greenish-yellow band
+                that can also be seen along their sides.
+            </p>
+
+            <p>
+                The primary flight feathers are green-blue.
+                The tail is light maroon underneath and green
+                on top.
+            </p>
+
+            <p>
+                Brownish patches can be seen around their
+                ears.
+            </p>
+
+            <p>
+                These birds weigh around 65-85 grams and
+                generally measure around 10 inches from the
+                head to the tail.
+            </p>
+
+            <p>
+                Their average lifespan is generally around
+                20 years.
+            </p>
+
+            <p>
+                Because of their size, they require a
+                medium-to-small cage with appropriate
+                bar spacing.
+            </p>
+
+            <p>
+                Maroon Bellied Conures are social, intelligent,
+                inquisitive and affectionate birds. They are
+                also relatively quiet compared with some
+                other Conure species.
+            </p>
+
+        </div>
+
+    </section>
+  <!-- CONTACT -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For A Conure?
+        </h2>
+
+        <p>
+            Contact us to find out which baby birds are
+            currently available.
+        </p>
+
+        <a href="contact.html">
+            CONTACT US
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caiques For Sale | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="Caiques for sale including White Bellied and Black Headed Caiques."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        /* PAGE TITLE */
+
+        .species-title {
+            text-align: center;
+            margin: 55px auto 45px;
+        }
+
+        .species-title h1 {
+            margin: 0;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(40px, 6vw, 58px);
+        }
+
+
+        /* MAIN CAIQUE SECTION */
+
+        .main-species {
+            margin-bottom: 65px;
+        }
+
+         .main-species-image {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .main-species-image img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .main-species-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .species-title {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .species-title h1 {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+
+        .main-species-image {
+            width: 100%;
+
+            margin-bottom: 35px;
+
+            background: #f2eee9;
+        }
+
+        .main-species-image img {
+            display: block;
+
+            width: 100%;
+
+            max-height: 550px;
+
+            object-fit: cover;
+        }
+
+        .main-species-content h2,
+        .bird-content h2 {
+            margin: 0 0 20px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 32px;
+        }
+
+        .main-species-content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 24px;
+        }
+
+        .main-species-content p,
+        .bird-content p {
+            margin-bottom: 17px;
+
+            color: #555;
+
+            line-height: 1.85;
+        }
+
+
+        /* BIRD SECTIONS */
+
+        .bird-section {
+            display: grid;
+
+            grid-template-columns: 42% 58%;
+
+            gap: 40px;
+
+            align-items: start;
+
+            margin-bottom: 70px;
+
+            padding-bottom: 60px;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bird-section:nth-of-type(even) {
+            grid-template-columns: 58% 42%;
+        }
+        .bird-section:nth-of-type(even)
+        .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-of-type(even)
+        .bird-content {
+            order: 1;
+        }
+
+        .bird-image {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition: transform .3s ease;
+        }
+
+        .bird-image:hover img {
+            transform: scale(1.03);
+        }
+
+
+        /* AVAILABLE BABIES */
+
+        .available-link {
+            text-align: center;
+
+            margin: 10px 0 65px;
+        }
+
+        .available-link a {
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            background: #6b4423;
+
+            color: #fff;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .available-link a:hover {
+            background: #4c3019;
+        }
+
+
+        /* CONTACT */
+
+        .species-contact {
+            margin: 20px 0 80px;
+
+            padding: 45px 25px;
+
+            background: #f6f1eb;
+
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+
+            color: #4c3019;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+
+            line-height: 1.7;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .bird-section,
+            .bird-section:nth-of-type(even) {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 25px;
+            }
+
+            .bird-section:nth-of-type(even)
+            .bird-image,
+            .bird-section:nth-of-type(even)
+            .bird-content {
+
+                order: initial;
+            }
+
+            .main-species-image img {
+                max-height: 400px;
+            }
+
+            .bird-content h2,
+            .main-species-content h2 {
+                font-size: 28px;
+            }
+        }
+          @media (max-width: 550px) {
+
+            .species-title {
+                margin-top: 35px;
+            }
+
+            .species-title h1 {
+                font-size: 38px;
+            }
+
+            .main-species-content p,
+            .bird-content p {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+       <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+<nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="macaws.html">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatoos.html">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="conures.html">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="african-grey.html">
+                            African Grey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="amazons.html">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="budgies.html">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="caiques.html"
+                            class="active"
+                        >
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cockatiels.html">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="finches.html">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="parrotlets.html">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="others.html">
+                            Others
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="species-page">
+    <!-- PAGE TITLE -->
+
+    <section class="species-title">
+
+        <h1>
+            Caiques For Sale
+        </h1>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CAIQUES
+    ========================================== -->
+
+    <section class="main-species">
+
+
+        <div class="main-species-image">
+
+            <!-- IMAGE:
+                 CAIQUES FOR SALE -->
+
+            <img
+                src="images\caiques\Black-headed_Caique_adult_pets_in_cage.jpg"
+                alt="Caiques For Sale"
+            >
+
+        </div>
+
+
+        <div class="main-species-content">
+
+            <h2>
+                Caiques
+            </h2>
+
+            <p>
+                Once you explore this family of species, you
+                will learn that these birds make great
+                companions for households and other calm
+                environments.
+            </p>
+
+            <p>
+                These birds have inquisitive antics and the
+                ability to make their owners and other people
+                laugh and smile instinctively.
+            </p>
+
+            <p>
+                Many bird fanciers love adopting Caiques.
+                There are different perspectives to view the
+                personalities of different birds.
+            </p>
+
+            <p>
+                For example, some people think that African
+                Grey parrots are intellectuals of the bird
+                species while the Macaws are the most
+                attractive show-offs.
+            </p>
+
+            <p>
+                In the same way, most people consider Caique
+                to be clowns in the bird community.
+            </p>
+
+            <p>
+                Caique birds can make mischief, unlike any
+                other bird species that you will encounter.
+                Once you pet them, their silly antics and
+                tricks will make you laugh and let you know
+                why the metaphor "clown" suits them so well.
+            </p>
+
+            <p>
+                Bird enthusiasts keep either one or both
+                types of the main Caique species:
+                the White Bellied Caiques and Black-Headed
+                Caiques.
+            </p>
+
+            <p>
+                People also pet a less common subspecies of
+                the White Bellied Caiques, known as the
+                yellow-thigh Caique.
+            </p>
+
+            <p>
+                Both of the main Caique species are
+                approximately 9-10 inches long.
+            </p>
+
+            <p>
+                Their color range includes green, yellow,
+                white and orange.
+            </p>
+
+            <p>
+                The names suggest the differences. The
+                White-Bellied Caiques have a white belly
+                while the Black-Headed Caiques have a
+                black-colored head.
+            </p>
+
+            <p>
+                The White Bellied Caiques may also have a
+                horn-colored beak and a yellowish-bright
+                orange head.
+            </p>
+
+
+            <h3>
+                Native Region / Natural Habitat
+            </h3>
+
+            <p>
+                Natively, Caiques belong to South America.
+                They primarily dwell in this region.
+            </p>
+                      <h3>
+                Personality &amp; Behavior
+            </h3>
+
+            <p>
+                There are two main reasons for their
+                popularity, which include their personality
+                and stunning appearance.
+            </p>
+
+            <p>
+                These birds are quite comedic and comical in
+                personality.
+            </p>
+
+            <p>
+                Many bird owners, especially those who have
+                petted either the White-Bellied Caiques or
+                the Black-Headed Caiques, know that there are
+                many things you have to accept as a bird
+                owner.
+            </p>
+
+            <p>
+                They are wonderful, enjoyable and active,
+                but they have certain aspects that make them
+                difficult.
+            </p>
+
+            <p>
+                They can intensely and aggressively engage
+                with other bird species.
+            </p>
+
+            <p>
+                So keep an eye out for all the birds that are
+                around your Caique, especially Caiques
+                themselves.
+            </p>
+
+            <p>
+                While they can be willful and stubborn in
+                some situations, they are so cute that bird
+                owners don't mind this minor flaw.
+            </p>
+
+            <p>
+                Caiques are always energetic and active,
+                which means that learning when they are sick
+                can be quite easy.
+            </p>
+
+            <p>
+                Easy-to-break toys are the best toys for
+                Caiques.
+            </p>
+
+            <p>
+                But since the toys are easy for them to
+                break, remember to get replacements so they
+                can continue to play.
+            </p>
+
+            <p>
+                They tend to get stressed when their
+                easy-to-break toys aren't replaced.
+            </p>
+
+
+            <h3>
+                Speech &amp; Sounds
+            </h3>
+
+            <p>
+                Although other birds are louder, bird owners
+                don't know Caiques for being quiet.
+            </p>
+
+            <p>
+                If you have sensitive neighbors, you may want
+                to rethink how you are going to pet any type
+                of Caique species.
+            </p>
+
+            <p>
+                They cluck and whistle extremely well, but
+                they aren't proficient in talking.
+            </p>
+
+            <p>
+                They do speak with proper training but won't
+                be able to compete against other birds in
+                terms of talking abilities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- AVAILABLE BABIES -->
+<div class="available-link">
+
+        <a href="available-babies.html">
+            SEE AVAILABLE BABIES FOR SALE
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================================
+         WHITE BELLIED CAIQUE
+    ========================================== -->
+
+    <section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 WHITE BELLIED CAIQUE -->
+
+            <img
+                src="images\caiques\Pionites_leucogaster_-Parque_de_las_Aves_-Foz_de_Iguazu-6a-4c.jpg"
+                alt="White Bellied Caique"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                White Bellied Caique
+            </h2>
+
+            <p>
+                Pet owners also use the terms White-Breasted
+                Caique and White-bellied Parrot to refer to
+                their White-Bellied Caique.
+            </p>
+
+            <p>
+                These parrots are native to the Brazilian
+                basin regions, where they thrive in the low
+                rainforest areas with high trees.
+            </p>
+
+            <p>
+                It is worth mentioning that this parrot is
+                currently endangered, and its population is
+                constantly decreasing.
+            </p>
+
+            <p>
+                They make for unimaginably active house pets.
+            </p>
+
+            <p>
+                White-Bellied Caiques are energetic and seem
+                to have a nosy attitude towards everything
+                that's going on inside a house.
+            </p>
+
+            <p>
+                Once you pet them, you have to make sure that
+                you provide them with adequate attention and
+                love.
+            </p>
+
+            <p>
+                These social birds have a flat band of white
+                color on their belly, while their heads have
+                a bold orange color.
+            </p>
+
+            <p>
+                Normally, these intellectual Caiques have
+                entirely green feathers on their wings,
+                without a trace of other colors.
+            </p>
+
+            <p>
+                Apart from their belly, their entire body
+                features a mix of bold orange and light red.
+            </p>
+
+            <p>
+                The tail is also bold orange but ends with a
+                darker and bolder color.
+            </p>
+
+            <p>
+                White-Bellied Caiques weigh around 160 grams
+                on average and can be as long as 9 inches.
+            </p>
+
+            <p>
+                Keep in mind that the 9" length is for adult
+                White Bellied Caiques.
+            </p>
+
+            <p>
+                White Bellied Caiques usually live around
+                30 years, but there are instances when they
+                cross the threshold of that lifespan.
+            </p>
+
+            <p>
+                Mating the White-Bellied Caiques isn't easy
+                as both genders are identical.
+            </p>
+
+            <p>
+                A DNA test is necessary to begin the sexing
+                process between two Caiques.
+            </p>
+
+            <p>
+                Being energetic and highly social, they
+                interact easily and can reproduce without
+                any hassles.
+            </p>
+
+            <p>
+                Call us at
+                <strong>(732) 764-2473</strong>
+                to find out about our selection of White
+                Bellied Caique for sale.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BLACK HEADED CAIQUE
+    ========================================== -->
+
+    <section class="bird-section">
+        <div class="bird-image">
+
+            <!-- IMAGE:
+                 BLACK HEADED CAIQUE -->
+
+            <img
+                src="images\caiques\Pionites_melanocephalus_-captivity-6.jpg"
+                alt="Black Headed Caique"
+            >
+
+        </div>
+
+
+        <div class="bird-content">
+
+            <h2>
+                Black Headed Caique
+            </h2>
+
+            <p>
+                Suriname and Guyana are the native regions
+                for most Black-Headed Caiques.
+            </p>
+
+            <p>
+                These birds are also present along the north
+                of the Amazon since they reside in lowland
+                forests.
+            </p>
+
+            <p>
+                Being highly energetic and social, the most
+                common reason for their popularity as house
+                pets is their mischievous personality.
+            </p>
+
+            <p>
+                Black Headed Caiques quickly learn new tricks
+                and remain playful through their lifespan.
+            </p>
+
+            <p>
+                They are intelligent birds and love to
+                entertain their owners through their playful
+                attitudes.
+            </p>
+
+            <p>
+                Bird-lovers tend to call them the clowns
+                among various parrot breeds.
+            </p>
+
+            <p>
+                These birds are similar to White-Bellied
+                Caiques since they both have a huge band of
+                white color over their belly, while their
+                wing feathers are entirely green.
+            </p>
+
+            <p>
+                Apart from their white belly, the body
+                comprises shades of green, while a large
+                proportion of the physical appearance
+                features bold orange colors.
+            </p>
+
+            <p>
+                The head is the primary distinction between
+                Black-headed Caiques and White-bellied
+                Caiques in terms of appearance.
+            </p>
+
+            <p>
+                As the name suggests, their head is black and
+                connects with the bold orange towards the end.
+            </p>
+
+            <p>
+                Sometimes, the black color over the head
+                extends to the beak, with some green shading
+                underneath it.
+            </p>
+
+            <p>
+                The wingspan of adult Black-Headed Caiques
+                is somewhere around 14 inches, while their
+                overall length from head to tail is normally
+                around 9 inches.
+            </p>
+
+            <p>
+                Another name for this bird is the
+                Black-Capped Parrot.
+            </p>
+
+            <p>
+                Black Headed Caiques weigh around
+                130-170 grams.
+            </p>
+
+            <p>
+                Generally, these birds can live longer than
+                30 years in captivity.
+            </p>
+
+            <p>
+                If you're thinking about keeping these birds
+                as pets in an apartment, you should know that
+                they require a fair amount of exercise.
+            </p>
+
+            <p>
+                They tend to be quite loud while flying.
+            </p>
+            <p>
+                Our staff is available at
+                <strong>(732) 764-2473</strong>
+                to help you find your Black Headed Caique
+                for sale.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For A Caique?
+        </h2>
+
+        <p>
+            Call us at
+            <strong>(732) 764-2473</strong>
+            to find out about our current selection.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat: 11:00am-8:00pm
+            </p>
+
+            <p>
+                Sun: 12pm - 5pm
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+

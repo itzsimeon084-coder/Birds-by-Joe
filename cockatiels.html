@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cockatiels For Sale | Birds by Joe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .species-page {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        .species-title {
+            text-align: center;
+            margin: 55px auto 45px;
+        }
+
+        .species-title h1 {
+            margin: 0;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(40px, 6vw, 58px);
+        }
+         .main-species {
+            margin-bottom: 65px;
+        }
+
+         .main-species-image {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px 0 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .main-species-image img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .main-species-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .species-title {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .species-title h1 {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .main-species {
+            margin-bottom: 60px;
+        }
+
+        .main-species-image {
+            width: 100%;
+            margin-bottom: 35px;
+            background: #f2eee9;
+        }
+
+        .main-species-image img {
+            display: block;
+            width: 100%;
+            max-height: 550px;
+            object-fit: cover;
+        }
+
+        .main-species-content h2,
+        .bird-content h2 {
+            margin: 0 0 20px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 32px;
+        }
+
+        .main-species-content h3 {
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+        }
+
+        .main-species-content p,
+        .bird-content p {
+            margin-bottom: 17px;
+            color: #555;
+            line-height: 1.85;
+        }
+
+        .bird-section {
+            display: grid;
+            grid-template-columns: 42% 58%;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 70px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bird-section:nth-of-type(even) {
+            grid-template-columns: 58% 42%;
+        }
+
+        .bird-section:nth-of-type(even) .bird-image {
+            order: 2;
+        }
+
+        .bird-section:nth-of-type(even) .bird-content {
+            order: 1;
+        }
+
+        .bird-image {
+            width: 100%;
+            overflow: hidden;
+            background: #f2eee9;
+        }
+
+        .bird-image img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            transition: transform .3s ease;
+        }
+
+        .bird-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .available-link {
+            text-align: center;
+            margin: 10px 0 65px;
+        }
+
+        .available-link a {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #6b4423;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .available-link a:hover {
+            background: #4c3019;
+        }
+
+        .species-contact {
+            margin: 20px 0 80px;
+            padding: 45px 25px;
+            background: #f6f1eb;
+            text-align: center;
+        }
+
+        .species-contact h2 {
+            margin-bottom: 15px;
+            color: #4c3019;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+        }
+
+        .species-contact p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 750px) {
+            .bird-section,
+            .bird-section:nth-of-type(even) {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .bird-section:nth-of-type(even) .bird-image,
+            .bird-section:nth-of-type(even) .bird-content {
+                order: initial;
+            }
+
+            .main-species-image img {
+                max-height: 400px;
+            }
+
+            .bird-content h2,
+            .main-species-content h2 {
+                font-size: 28px;
+            }
+        }
+              @media (max-width: 550px) {
+            .species-title {
+                margin-top: 35px;
+            }
+
+            .species-title h1 {
+                font-size: 38px;
+            }
+
+            .main-species-content p,
+            .bird-content p {
+                font-size: 15px;
+            }
+        }
+    </style>
+
+       <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="index.html" class="logo">
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe"
+            >
+        </a>
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+    </div>
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+    <nav class="main-navigation">
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation"
+        >
+            ☰
+        </button>
+
+        <ul class="navigation-list">
+
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+
+            <li class="dropdown">
+
+                <a
+                    href="our-birds.html"
+                    class="active"
+                >
+                    BIRD SPECIES <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a href="macaws.html">Macaws</a></li>
+                    <li><a href="cockatoos.html">Cockatoos</a></li>
+                    <li><a href="conures.html">Conures</a></li>
+                    <li><a href="african-grey.html">African Grey</a></li>
+                    <li><a href="amazons.html">Amazons</a></li>
+                    <li><a href="budgies.html">Budgies</a></li>
+                    <li><a href="caiques.html">Caique</a></li>
+
+                    <li>
+                        <a
+                            href="cockatiels.html"
+                            class="active"
+                        >
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li><a href="finches.html">Finches</a></li>
+                    <li><a href="parrotlets.html">Parrotlets</a></li>
+                    <li><a href="others.html">Others</a></li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE <span>▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a href="shop.html#seeds">Seeds</a></li>
+                    <li><a href="shop.html#food">Food by the Pound</a></li>
+                    <li><a href="shop.html#vitamins">Vitamins &amp; Minerals</a></li>
+                    <li><a href="shop.html#toys">Toys</a></li>
+                    <li><a href="shop.html#perches">Perches</a></li>
+                    <li><a href="shop.html#stands">Stands</a></li>
+
+                </ul>
+
+            </li>
+
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="cage-info.html">CAGE INFO</a></li>
+            <li><a href="terms.html">TERMS &amp; CONDITIONS</a></li>
+            <li><a href="reviews.html">REVIEWS</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main class="species-page">
+
+    <section class="species-title">
+
+        <h1>
+            Cockatiels For Sale
+        </h1>
+
+    </section>
+
+
+    <!-- COCKATIELS -->
+
+    <section class="main-species">
+
+        <div class="main-species-image">
+
+            <!-- IMAGE: COCKATIELS -->
+
+            <img
+                src="images\cockatiels\Nymphicus_hollandicus_Bronzefallow.jpg"
+                alt="Cockatiels For Sale"
+            >
+
+        </div>
+
+        <div class="main-species-content">
+
+            <h2>
+                Cockatiels
+            </h2>
+
+            <p>
+                Cockatiels are extremely comical and social
+                birds that are popular as house pets.
+            </p>
+
+            <p>
+                They are amazing whistlers, which makes them
+                pleasing for many pet owners.
+            </p>
+
+            <p>
+                Male cockatiels whistle serenades to their
+                favorite people, especially owners.
+            </p>
+
+            <p>
+                Male cockatiels may even direct their
+                serenades to their own mirror reflections
+                or favorite objects.
+            </p>
+
+            <p>
+                If they are not whistling, you will surely
+                find them snuggling on the arm or shoulder
+                of their owner or favorite person.
+            </p>
+
+            <p>
+                They are good at looking for food in their
+                cage and making it look interesting.
+            </p>
+
+            <p>
+                For pet-loving families in need of a social
+                and affectionate pet, cockatiels are an
+                ideal choice.
+            </p>
+
+
+            <h3>
+                Native Region / Natural Habitat
+            </h3>
+
+            <p>
+                Cockatiels don't carry a screech similar to
+                the ear-piercing sound from parrots.
+            </p>
+
+            <p>
+                This is because they come from open
+                environments like semi-arid and nearly arid
+                regions across Australia.
+            </p>
+
+            <p>
+                That is the native region cockatiels belong
+                to.
+            </p>
+
+            <p>
+                In the wilderness, cockatiels have to come
+                down to the ground to search for food.
+            </p>
+
+            <p>
+                In the wild, cockatiels breed rapidly, but
+                breeding them in captivity is also easy.
+            </p>
+
+            <p>
+                Easy breeding and wide availability are some
+                of the main reasons why they are readily
+                available in the market for pet owners.
+            </p>
+
+            <p>
+                It also lowers their cost, making them
+                affordable pets for families.
+            </p>
+
+            <p>
+                Since cockatiels remain light sleepers
+                throughout their life in the wild, they are
+                always suspicious and remain on high alert
+                for fear of predators.
+            </p>
+
+            <p>
+                This isn't the case with most captive pet
+                cockatiels, but night-fright incidents once
+                in a while are common.
+            </p>
+
+            <p>
+                If your pet cockatiel starts thrashing its
+                head on the cage, you can leave a night light
+                on to help them feel comfortable.
+            </p>
+            <p>
+                A female cockatiel can make a great
+                companion.
+            </p>
+
+
+            <h3>
+                Personality &amp; Behavior
+            </h3>
+
+            <p>
+                You can tell about a cockatiel's mood from
+                the positioning of the feathers on their
+                crest.
+            </p>
+
+            <p>
+                If the feathers are straight up, the bird is
+                either extremely curious or startled by
+                something.
+            </p>
+
+            <p>
+                When relaxing and calm, it will hold the
+                crest feathers slightly backward while the
+                cheek feathers will fluff up.
+            </p>
+
+            <p>
+                If the bird is calm and happy, it will keep
+                grinding its beak.
+            </p>
+
+            <p>
+                If the bird is defensive, it will hiss and
+                hold the crest feathers close to the head
+                and flatten them.
+            </p>
+
+            <p>
+                Non-toxic and easy-breakage chew toys are
+                suitable play objects for cockatiels.
+            </p>
+
+            <p>
+                Bead fiddles are hard-plastic toys among
+                cockatiels' favorite toys.
+            </p>
+
+            <p>
+                Since they are amazing whistlers, they look
+                for mirrors and reflective objects to
+                whistle to.
+            </p>
+
+            <p>
+                Keep a close check on where your pet
+                cockatiel is because they have a constant
+                habit of moving down to the floor to play
+                or forage for food.
+            </p>
+
+            <p>
+                Often, female cockatiels will look for
+                secretive corners, but you can get them back
+                by training them to whistle on cue.
+            </p>
+
+
+            <h3>
+                Speech &amp; Sounds
+            </h3>
+
+            <p>
+                While these birds can speak a few phrases or
+                words, male cockatiels whistle more than
+                female cockatiels.
+            </p>
+
+            <p>
+                Their chirping sound is low, which makes it
+                clear that they are suitable as apartment
+                pets.
+            </p>
+
+            <p>
+                If a cockatiel sees you leaving the room,
+                they may chirp at you if you are their
+                favorite person and want to stay with you.
+            </p>
+
+            <p>
+                We have a wide variety of handfed cockatiels
+                available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- AVAILABLE BABIES -->
+
+    <div class="available-link">
+
+        <a href="available-babies.html">
+            SEE AVAILABLE BABIES FOR SALE
+        </a>
+
+    </div>
+
+
+    <!-- WHITE FACED COCKATIEL -->
+
+    <section class="bird-section">
+        <div class="bird-image">
+
+            <!-- IMAGE: WHITE FACED COCKATIEL -->
+
+            <img
+                src="images\cockatiels\Nymphicus_hollandicus_-Woodland_Park_Zoo,_Washington,_USA-8a.jpg"
+                alt="White Faced Cockatiel"
+            >
+
+        </div>
+
+        <div class="bird-content">
+
+            <h2>
+                White Faced Cockatiel
+            </h2>
+
+            <p>
+                As some of the most popular caged birds, the
+                White-Faced Cockatiel is a member of the
+                Cockatoo family.
+            </p>
+
+            <p>
+                New and inexperienced pet-lovers sometimes
+                confuse the White-Faced Cockatiel with
+                Albino Cockatiels.
+            </p>
+
+            <p>
+                These birds are highly social and love
+                interacting with their owners.
+            </p>
+
+            <p>
+                Since they are easy to breed, they have
+                quickly become among the most common pet
+                birds in households, including apartments.
+            </p>
+
+            <p>
+                They can live with other birds from the same
+                family, as well as some birds from other
+                families, quite peacefully.
+            </p>
+
+            <p>
+                However, they don't dwell well in solitude,
+                and keeping a fellow bird in their cage can
+                help them feel safe when they are alone.
+            </p>
+
+            <p>
+                The signature feature of White-Faced
+                Cockatiels is the result of a mutation in the
+                Cockatoo family.
+            </p>
+
+            <p>
+                Their body is covered in patches of charcoal
+                grey color.
+            </p>
+
+            <p>
+                They don't have orange patches or yellow
+                shades on their cheeks either.
+            </p>
+
+            <p>
+                Unlike other Cockatiels from the same
+                family, White-Faced Cockatiels have grey
+                plumage.
+            </p>
+
+            <p>
+                Their genetic mutation prevents the
+                appearance of yellow color pigments, which
+                keeps their plumage grey-colored.
+            </p>
+
+            <p>
+                A White-Faced Cockatiel can live around
+                15-25 years in captivity with proper care.
+            </p>
+
+            <p>
+                Exercise is important for all cockatiels,
+                especially this one.
+            </p>
+
+            <p>
+                An adult White-Faced Cockatiel can measure
+                around 12-13 inches.
+            </p>
+
+            <p>
+                These Cockatiels weigh around 85-115 grams.
+            </p>
+
+            <p>
+                We're available at
+                <strong>(732) 764-2473</strong>
+                to answer your questions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LUTINO COCKATIEL -->
+<section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE: LUTINO COCKATIEL -->
+
+            <img
+                src="images\cockatiels\Nymphicus_hollandicus_DT_-Z_Cóndor-_0803_(2)_(20859406125).jpg"
+                alt="Lutino Cockatiel"
+            >
+
+        </div>
+
+        <div class="bird-content">
+
+            <h2>
+                Lutino Cockatiel
+            </h2>
+
+            <p>
+                Lutino Cockatiels are highly popular household
+                pets because they are easy to breed and take
+                care of.
+            </p>
+
+            <p>
+                Their distinct appearance makes them easy to
+                recognize.
+            </p>
+
+            <p>
+                Similar to White-Faced Cockatiels, this breed
+                is also popular for its unique mutation.
+            </p>
+
+            <p>
+                These birds tend to thrive in a joyous
+                environment around playful toys and objects.
+            </p>
+
+            <p>
+                They are mild-tempered and easy to care for.
+            </p>
+
+            <p>
+                They need love, affection and attention from
+                their owners.
+            </p>
+
+            <p>
+                The color combination of Lutino Cockatiels
+                is one of the easiest to recognize.
+            </p>
+
+            <p>
+                Both males and females have similar color
+                schemes.
+            </p>
+
+            <p>
+                Their bodies are generally white with a
+                yellow-colored head and distinct rose-pink
+                cheek patches.
+            </p>
+
+            <p>
+                They often have a high yellow head crest
+                extending toward the back.
+            </p>
+
+            <p>
+                Lutino Cockatiels can also have pied markings,
+                although these are relatively rare.
+            </p>
+
+            <p>
+                A more common name for Lutino Cockatiel is
+                Lutino Tiel or Moonbeam Cockatiel.
+            </p>
+
+            <p>
+                Lutino Cockatiels can live around 16-25 years
+                in captivity with proper care, nutrition and
+                exercise.
+            </p>
+
+            <p>
+                They are normally around 12-13 inches long
+                and weigh approximately 85-125 grams.
+            </p>
+
+            <p>
+                Call us at
+                <strong>(732) 764-2473</strong>
+                to find out about our Lutino Cockatiel
+                selection.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALBINO COCKATIEL -->
+<section class="bird-section">
+
+        <div class="bird-image">
+
+            <!-- IMAGE: ALBINO COCKATIEL -->
+
+            <img
+                src="images\cockatiels\alb c.jpg"
+                alt="Albino Cockatiel"
+            >
+
+        </div>
+
+        <div class="bird-content">
+
+            <h2>
+                Albino Cockatiel
+            </h2>
+
+            <p>
+                Although the name is Albino, these Cockatiels
+                aren't technically albino in their plumage.
+            </p>
+
+            <p>
+                Some bird-lovers suggest the name
+                White-Faced Lutino Cockatiel because these
+                birds carry characteristics of both.
+            </p>
+
+            <p>
+                As social birds, they love staying near their
+                owners almost all the time.
+            </p>
+
+            <p>
+                Providing them with a spacious cage can also
+                be sufficient.
+            </p>
+
+            <p>
+                They may not talk as fluently or for as long
+                as some other Cockatiels, but they serenade
+                and whistle to show affection towards their
+                owners.
+            </p>
+
+            <p>
+                Albino Cockatiels have a completely bold white
+                appearance that is distinctive.
+            </p>
+
+            <p>
+                Their solid white body is accompanied by
+                prominent red eyes.
+            </p>
+
+            <p>
+                Female Cockatiels may carry a color pattern
+                called tail barring on the underside of the
+                tail.
+            </p>
+
+            <p>
+                These birds are sometimes regarded as Clear
+                Pied Cockatiels.
+            </p>
+
+            <p>
+                Unlike original Cockatoos that have markings
+                on their wings, these birds have pure white
+                wing feathers.
+            </p>
+
+            <p>
+                Albino Cockatiels can live around 15 years and
+                sometimes longer with the right nutritional
+                and exercise regime.
+            </p>
+
+            <p>
+                They require sufficient exercise and
+                playtime regularly.
+            </p>
+
+            <p>
+                They measure around 12-13 inches.
+            </p>
+
+            <p>
+                They can weigh over 100 grams but usually
+                remain in the 70-120 gram range.
+            </p>
+
+            <p>
+                Call us at
+                <strong>(732) 764-2473</strong>
+                anytime and ask about our Albino Cockatiel
+                selection.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="species-contact">
+
+        <h2>
+            Looking For A Cockatiel?
+        </h2>
+
+        <p>
+            Call
+            <strong>(732) 764-2473</strong>
+            to ask about current availability.
+        </p>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe"
+                class="footer-logo"
+            >
+
+            <p>Birds by Joe</p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="our-birds.html">Bird Species</a>
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+            <a href="shop.html">Shop Online</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Contact</h3>
+
+            <p>265 RT 22</p>
+            <p>Greenbrook NJ 08812</p>
+            <p>(732) 764-2473</p>
+            <p>Service@BirdsByJoe.com</p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Hours</h3>
+
+            <p>
+                Mon - Sat: 11:00am-8:00pm
+            </p>
+
+            <p>Sun: 12pm - 5pm</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+

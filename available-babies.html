@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Available Babies | Birds by Joe</title>
+
+    <meta
+        name="description"
+        content="View available baby birds from Birds by Joe."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           AVAILABLE BABIES PAGE
+           ===================================================== */
+
+        .available-page {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           PAGE BANNER
+           ===================================================== */
+
+        .available-banner {
+            position: relative;
+
+            min-height: 360px;
+
+            margin: 35px auto 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: #4c3019;
+        }
+
+        .available-banner img {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .available-banner::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, 0.50);
+        }
+
+        .available-banner-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 30px;
+
+            text-align: center;
+
+            color: #ffffff;
+        }
+
+        .available-banner-content h1 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(38px, 6vw, 62px);
+
+            margin-bottom: 12px;
+        }
+
+        .available-banner-content p {
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           INTRO
+           ===================================================== */
+              .available-introduction {
+            max-width: 850px;
+
+            margin:
+                0 auto 65px;
+
+            text-align: center;
+        }
+
+        .available-introduction h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size:
+                clamp(32px, 5vw, 46px);
+
+            margin-bottom: 18px;
+        }
+
+        .available-introduction p {
+            color: #555555;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =====================================================
+           NOTICE
+           ===================================================== */
+
+        .availability-notice {
+            margin-bottom: 55px;
+
+            padding: 22px 25px;
+
+            background: #f6f1eb;
+
+            border-left:
+                5px solid #6b4423;
+        }
+
+        .availability-notice strong {
+            color: #4c3019;
+        }
+
+
+        /* =====================================================
+           FILTER
+           ===================================================== */
+
+        .bird-filter {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 35px;
+        }
+
+        .bird-filter h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 32px;
+        }
+
+        .bird-filter select {
+            padding: 11px 14px;
+
+            border:
+                1px solid #cccccc;
+
+            background: #ffffff;
+
+            outline: none;
+
+            min-width: 190px;
+        }
+
+
+        /* =====================================================
+           BIRD GRID
+           ===================================================== */
+
+        .available-bird-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+
+            margin-bottom: 90px;
+        }
+
+
+        /* =====================================================
+           BIRD CARD
+           ===================================================== */
+             .available-bird-card {
+            overflow: hidden;
+
+            background: #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .available-bird-card:hover {
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =====================================================
+           IMAGE
+           ===================================================== */
+
+        .available-bird-image {
+            position: relative;
+
+            background: #eeeeee;
+        }
+
+        .available-bird-image img {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease;
+        }
+
+        .available-bird-card:hover
+        .available-bird-image img {
+            transform:
+                scale(1.04);
+        }
+
+
+        /* =====================================================
+           AVAILABILITY BADGE
+           ===================================================== */
+
+        .availability-badge {
+            position: absolute;
+
+            top: 15px;
+            left: 15px;
+
+            z-index: 2;
+
+            padding:
+                7px 12px;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           CARD CONTENT
+           ===================================================== */
+
+        .available-bird-content {
+            padding: 23px;
+        }
+
+        .available-bird-content h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 25px;
+
+            margin-bottom: 5px;
+        }
+
+        .bird-species {
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: #777777;
+
+            font-size: 14px;
+        }
+
+        .available-bird-content p {
+            color: #555555;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           CARD DETAILS
+           ===================================================== */
+           .bird-detail-label {
+            color: #777777;
+        }
+
+        .bird-detail-value {
+            color: #333333;
+
+            font-weight: 600;
+
+            text-align: right;
+        }
+
+
+        /* =====================================================
+           REQUEST BUTTON
+           ===================================================== */
+
+        .bird-request-button {
+            display: block;
+
+            width: 100%;
+
+            padding: 12px 18px;
+
+            border: none;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition:
+                background 0.3s ease;
+        }
+
+        .bird-request-button:hover {
+            background: #4d2f17;
+        }
+
+
+        /* =====================================================
+           REQUEST SECTION
+           ===================================================== */
+
+        .request-section {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            margin-bottom: 90px;
+
+            background: #f6f1eb;
+        }
+
+        .request-image {
+            min-height: 430px;
+        }
+
+        .request-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .request-content {
+            padding: 50px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .request-content h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #4c3019;
+
+            font-size: 40px;
+
+            margin-bottom: 18px;
+        }
+
+        .request-content p {
+            color: #555555;
+
+            margin-bottom: 13px;
+        }
+
+
+        /* =====================================================
+           REQUEST FORM
+           ===================================================== */
+           .bird-request-form {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+            margin-top: 12px;
+        }
+
+        .bird-request-form input,
+        .bird-request-form textarea,
+        .bird-request-form select {
+            width: 100%;
+
+            padding: 13px;
+
+            border:
+                1px solid #cccccc;
+
+            background: #ffffff;
+
+            outline: none;
+        }
+
+        .bird-request-form textarea {
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+        .bird-request-form input:focus,
+        .bird-request-form textarea:focus,
+        .bird-request-form select:focus {
+            border-color:
+                #6b4423;
+        }
+
+        .bird-request-form button {
+            width: fit-content;
+
+            padding:
+                13px 25px;
+
+            border: none;
+
+            background: #6b4423;
+
+            color: #ffffff;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .bird-request-form button:hover {
+            background: #4d2f17;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .available-bird-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .request-section {
+                grid-template-columns: 1fr;
+            }
+
+            .request-image {
+                min-height: 330px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .available-banner {
+                min-height: 280px;
+
+                margin-top: 25px;
+
+                margin-bottom: 50px;
+            }
+
+            .available-banner-content h1 {
+                font-size: 40px;
+            }
+
+            .available-banner-content p {
+                font-size: 15px;
+            }
+
+            .available-bird-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                margin-bottom: 60px;
+            }
+
+            .bird-filter {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .bird-filter select {
+                width: 100%;
+            }
+
+            .request-content {
+                padding:
+                    35px 25px;
+            }
+
+            .request-content h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+    
+       <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+     var _smartsupp = _smartsupp || {};
+     _smartsupp.key = '3f5543257e075060c69d77e780180725c6cc99b8';
+     window.smartsupp||(function(d) {
+	     var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+	     s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+	     c.type='text/javascript';c.charset='utf-8';c.async=true;
+	     c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+     })(document);
+   </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header">
+
+
+    <div class="top-header">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <!-- IMAGE: LOGO -->
+
+            <img
+                src="images\home\481986749_1169036681897820_1932316470698291832_n.jpg"
+                alt="Birds by Joe Logo"
+            >
+
+        </a>
+
+
+        <a
+            href="tel:7327642473"
+            class="header-phone"
+        >
+            (732) 764-2473
+        </a>
+
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="search-container">
+
+        <form
+            id="searchForm"
+            class="search-form"
+        >
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search..."
+                autocomplete="off"
+                aria-label="Search website"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-navigation">
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+        <ul class="navigation-list">
+
+
+            <li>
+                <a href="index.html">
+                    HOME
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="our-birds.html">
+                    BIRD SPECIES
+                    <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="our-birds.html#macaws">
+                            Macaws
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatoos">
+                            Cockatoos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#conures">
+                            Conures
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#african-grey">
+                            African Grey
+                        </a>
+                    </li>
+                    <li>
+                        <a href="our-birds.html#amazons">
+                            Amazons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#budgies">
+                            Budgies
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#caique">
+                            Caique
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#cockatiels">
+                            Cockatiels
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#finches">
+                            Finches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="our-birds.html#parrotlets">
+                            Parrotlets
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="available-babies.html">
+                    AVAILABLE BABIES
+                </a>
+            </li>
+
+
+            <li class="dropdown">
+
+                <a href="shop.html">
+                    SHOP ONLINE
+                    <span>▾</span>
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="shop.html#seeds">
+                            Seeds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#food">
+                            Food by the Pound
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#vitamins">
+                            Vitamins &amp; Minerals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#toys">
+                            Toys
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#perches">
+                            Perches
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html#stands">
+                            Stands
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    ABOUT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    CONTACT US
+                </a>
+            </li>
+
+
+            <li>
+                <a href="cage-info.html">
+                    CAGE INFO
+                </a>
+            </li>
+
+
+            <li>
+                <a href="terms.html">
+                    TERMS &amp; CONDITIONS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="reviews.html">
+                    REVIEWS
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+     <main class="available-page">
+
+
+    <!-- =====================================================
+         BANNER
+         ===================================================== -->
+
+    <section class="available-banner">
+
+
+        <!-- IMAGE:
+             AVAILABLE BABIES BANNER -->
+
+        <img
+            src="images\cockatiels\162081906_266869101560279_6270091078540499831_n.jpg"
+            alt="Available baby birds"
+        >
+
+
+        <div class="available-banner-content">
+
+            <h1>
+                Available Babies
+            </h1>
+
+            <p>
+                Find your new feathered companion.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRODUCTION
+         ===================================================== -->
+
+    <section class="available-introduction">
+
+        <h2>
+            Our Available Baby Birds
+        </h2>
+
+        <p>
+            We offer a variety of hand-raised and
+            socialized baby birds.
+        </p>
+
+        <p>
+            Availability changes regularly, so please
+            contact us for the most current information
+            about a particular bird.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NOTICE
+         ===================================================== -->
+<div class="availability-notice">
+
+        <strong>
+            Please Note:
+        </strong>
+
+        Bird availability can change frequently.
+        Contact us before making arrangements to
+        confirm that the bird you are interested in
+        is still available.
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FILTER
+         ===================================================== -->
+
+    <div class="bird-filter">
+
+        <h2>
+            Current Birds
+        </h2>
+
+
+        <select
+            id="birdFilter"
+            aria-label="Filter birds by species"
+        >
+
+            <option value="all">
+                All Species
+            </option>
+
+            <option value="macaw">
+                Macaws
+            </option>
+
+            <option value="cockatoo">
+                Cockatoos
+            </option>
+
+            <option value="conure">
+                Conures
+            </option>
+
+            <option value="african-grey">
+                African Grey
+            </option>
+
+            <option value="amazon">
+                Amazons
+            </option>
+
+            <option value="caique">
+                Caiques
+            </option>
+
+            <option value="cockatiel">
+                Cockatiels
+            </option>
+
+            <option value="other">
+                Other Birds
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         AVAILABLE BIRDS
+         ===================================================== -->
+
+    <section
+        class="available-bird-grid"
+        id="availableBirdGrid"
+    >
+
+
+        <!-- =================================================
+             BIRD 1
+        ================================================== -->
+
+        <article
+            class="available-bird-card"
+            data-species="macaw"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT MACAW SPECIES/BIRD PHOTO -->
+
+                <img
+                    src="images\macaws\481546450_1166124075522414_2330922535491975505_n.jpg"
+                    alt="Available Macaw baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    Macaw Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: Macaw
+                </span>
+
+
+                <p>
+                    Hand-raised baby macaw looking for
+                    a loving and responsible home.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Macaw Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 2
+        ================================================== -->
+
+        <article
+            class="available-bird-card"
+            data-species="cockatoo"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT COCKATOO SPECIES/BIRD PHOTO -->
+
+                <img
+                    src="images\cockatoos\468343968_1082729523307562_1357565682811987957_n.jpg"
+                    alt="Available Cockatoo baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    Cockatoo Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: Cockatoo
+                </span>
+
+
+                <p>
+                    A socialized baby cockatoo raised
+                    with care and attention.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Cockatoo Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 3
+        ================================================== -->
+        <article
+            class="available-bird-card"
+            data-species="conure"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT CONURE SPECIES/BIRD PHOTO -->
+
+                <img
+                    src="images\conures\161185508_265366008377255_672734446776119945_n.jpg"
+                    alt="Available Conure baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    Conure Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: Conure
+                </span>
+
+
+                <p>
+                    Friendly and playful hand-raised
+                    conure baby.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Conure Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 4
+        ================================================== -->
+
+        <article
+            class="available-bird-card"
+            data-species="african-grey"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT AFRICAN GREY PHOTO -->
+<img
+                    src="images\african-grey\bag.jpg"
+                    alt="Available African Grey baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    African Grey Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: African Grey
+                </span>
+
+
+                <p>
+                    Intelligent and socialized African
+                    Grey baby.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="African Grey Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 5
+        ================================================== -->
+
+        <article
+            class="available-bird-card"
+            data-species="amazon"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT AMAZON PHOTO -->
+
+                <img
+                    src="images\amazons\470192601_1094890052091509_5973533194767472422_n.jpg"
+                    alt="Available Amazon baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    Amazon Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: Amazon
+                </span>
+
+
+                <p>
+                    Well-socialized Amazon baby raised
+                    with daily human interaction.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Amazon Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 6
+        ================================================== -->
+
+        <article
+            class="available-bird-card"
+            data-species="caique"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT CAIQUE PHOTO -->
+
+                <img
+                    src="images\caiques\Pionites_leucogaster_-chick_-feather-8a.jpg"
+                    alt="Available Caique baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    Caique Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: Caique
+                </span>
+
+
+                <p>
+                    Playful and energetic hand-raised
+                    Caique baby.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Caique Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 7
+        ================================================== -->
+        <article
+            class="available-bird-card"
+            data-species="cockatiel"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT COCKATIEL PHOTO -->
+
+                <img
+                    src="images\cockatiels\161982812_266869104893612_1618875431504539205_n.jpg"
+                    alt="Available Cockatiel baby"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="available-bird-content">
+
+                <h3>
+                    Cockatiel Baby
+                </h3>
+
+                <span class="bird-species">
+                    Species: Cockatiel
+                </span>
+
+
+                <p>
+                    Friendly and affectionate baby
+                    Cockatiel.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Cockatiel Baby"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             BIRD 8
+        ================================================== -->
+
+        <article
+            class="available-bird-card"
+            data-species="other"
+        >
+
+            <div class="available-bird-image">
+
+                <!-- IMAGE:
+                     INSERT OTHER BIRD PHOTO -->
+
+                <img
+                    src="images\parrotlets\468405493_1082734333307081_3880950905982158181_n.jpg"
+                    alt="Available baby bird"
+                >
+
+                <span class="availability-badge">
+                    Available
+                </span>
+
+            </div>
+            <div class="available-bird-content">
+
+                <h3>
+                    Other Baby Bird
+                </h3>
+
+                <span class="bird-species">
+                    Species: Contact Us
+                </span>
+
+
+                <p>
+                    Ask us about other baby birds that
+                    may currently be available.
+                </p>
+
+
+                <div class="bird-details">
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Age
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Contact Us
+                        </span>
+
+                    </div>
+
+
+                    <div class="bird-detail-row">
+
+                        <span class="bird-detail-label">
+                            Status
+                        </span>
+
+                        <span class="bird-detail-value">
+                            Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="#request"
+                    class="bird-request-button"
+                    data-bird="Other Baby Bird"
+                >
+                    INQUIRE ABOUT THIS BIRD
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REQUEST / CONTACT
+         ===================================================== -->
+
+    <section
+        class="request-section"
+        id="request"
+    >
+
+
+        <div class="request-image">
+
+            <!-- IMAGE:
+                 BIRD CONTACT / CUSTOMER SERVICE PHOTO -->
+
+            <img
+                src="images\home\contact.jpg"
+                alt="Contact Birds by Joe"
+            >
+
+        </div>
+
+
+        <div class="request-content">
+
+
+            <h2>
+                Interested in a Bird?
+            </h2>
+
+
+            <p>
+                Fill out the form below and let us know
+                which bird you are interested in.
+            </p>
+
+
+            <p>
+                We will use your information to respond
+                to your inquiry.
+            </p>
+
+
+            <!--
+                IMPORTANT:
+
+                This form does NOT store information in a
+                database.
+
+                Later we will connect it to an email/form
+                service so the owner's email receives the
+                request.
+            -->
+
+
+            <form
+                class="bird-request-form"
+                id="birdRequestForm"
+            >
+
+
+                <input
+                type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                >
+
+
+                <select
+                    name="bird"
+                    id="requestedBird"
+                    required
+                >
+
+                    <option value="">
+                        Select a Bird
+                    </option>
+
+                    <option>
+                        Macaw Baby
+                    </option>
+
+                    <option>
+                        Cockatoo Baby
+                    </option>
+
+                    <option>
+                        Conure Baby
+                    </option>
+
+                    <option>
+                        African Grey Baby
+                    </option>
+
+                    <option>
+                        Amazon Baby
+                    </option>
+
+                    <option>
+                        Caique Baby
+                    </option>
+
+                    <option>
+                        Cockatiel Baby
+                    </option>
+
+                    <option>
+                        Other Baby Bird
+                    </option>
+
+                </select>
+
+
+                <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                >
+                    SEND INQUIRY
+                </button>
+
+
+                <div
+                    id="birdRequestSuccess"
+                    class="form-success"
+                    hidden
+                ></div>
+
+
+            </form>
+          </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-content">
+
+
+        <div class="footer-column">
+
+            <img
+                src="images\home\156692413_259392222307967_3358215648818565913_n.jpg"
+                alt="Birds by Joe Logo"
+                class="footer-logo"
+            >
+
+            <p>
+                Birds by Joe
+            </p>
+
+            <p>
+                Specializing in Hand Raised Baby Parrots
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="our-birds.html">
+                Bird Species
+            </a>
+
+            <a href="available-babies.html">
+                Available Babies
+            </a>
+
+            <a href="shop.html">
+                Shop Online
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                265 RT 22
+            </p>
+
+            <p>
+                Greenbrook NJ 08812
+            </p>
+
+            <p>
+                (732) 764-2473
+            </p>
+
+            <p>
+                Service@BirdsByJoe.com
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Hours
+            </h3>
+
+            <p>
+                Mon - Sat:
+                11:00am - 8:00pm
+            </p>
+
+            <p>
+                Sun:
+                12pm - 5pm
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © Copyright 2021 Birds by Joe LLC
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+    /* =====================================================
+       AVAILABLE BIRD FILTER
+       ===================================================== */
+
+    const birdFilter =
+        document.getElementById("birdFilter");
+
+    const birdCards =
+        document.querySelectorAll(
+            ".available-bird-card"
+        );
+
+
+    if (birdFilter) {
+
+        birdFilter.addEventListener(
+            "change",
+            function () {
+
+                const selected =
+                    birdFilter.value;
+
+
+                birdCards.forEach(
+                    function (card) {
+
+                        const species =
+                            card.dataset.species;
+                            if (
+                            selected === "all" ||
+                            species === selected
+                        ) {
+
+                            card.style.display =
+                                "";
+
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       INQUIRE BUTTON
+       ===================================================== */
+
+    const inquiryButtons =
+        document.querySelectorAll(
+            ".bird-request-button"
+        );
+
+    const requestedBird =
+        document.getElementById(
+            "requestedBird"
+        );
+
+
+    inquiryButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    const birdName =
+                        button.dataset.bird;
+
+
+                    if (requestedBird) {
+
+                        requestedBird.value =
+                            birdName;
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       REQUEST FORM
+       ===================================================== */
+
+    const birdRequestForm =
+        document.getElementById(
+            "birdRequestForm"
+        );
+
+    const birdRequestSuccess =
+        document.getElementById(
+            "birdRequestSuccess"
+        );
+
+
+    if (birdRequestForm) {
+
+        birdRequestForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                /*
+                 * Temporary behavior.
+                 *
+                 * Later this will be connected to an
+                 * email service so the owner receives
+                 * the request.
+                 */
+
+
+                if (birdRequestSuccess) {
+
+                    birdRequestSuccess.hidden =
+                        false;
+
+                    birdRequestSuccess.textContent =
+                        "Thank you. Your inquiry has been received.";
+
+                }
+
+
+                birdRequestForm.reset();
+
+            }
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>
+  
+
+
+
